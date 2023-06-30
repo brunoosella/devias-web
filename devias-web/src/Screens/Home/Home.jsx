@@ -8,7 +8,7 @@ export default function Home(){
 
   return(
     <div id='home'>
-      <h1>HOME</h1>
+      <h1>Ésto es la Home</h1>
     </div>
   )
 
