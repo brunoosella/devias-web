@@ -1,13 +1,15 @@
 // External Modules
 import React from 'react'
 
-// Internal nmodules
-import Home from './Screens/Home'
+// Router
+import Router from './Router/Router'
 
 export default function App() {
 
   return (
-    <Home />
+
+    <Router />
+
   )
 
 }
