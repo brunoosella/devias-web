@@ -1,12 +1,12 @@
 // External Modules
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 // Internal modules
 import './Header.scss'
 
-// Components
-import LinkLogo from '../LinkLogo/LinkLogo'
-import { Link, NavLink } from 'react-router-dom'
+// Assets
+import logo from '../../Assets/logo.png'
 
 
 export default function Header() {
@@ -14,20 +14,30 @@ export default function Header() {
         <header>
             <nav className='container-header'>
                 <section className='container-header-logo'>
-                    {/* <LinkLogo className='header-logo' /> */}
+                    <Link to='/'>
+                        <img src={logo} alt="dev-logo" />
+                    </Link>
                 </section>
                 <section className='container-header-links'>
-                    {/* <ul>
-                        <NavLink to='/'> Home </NavLink>
-                        <NavLink to='/'> Our customers </NavLink>
-                        <NavLink to='/'> About us </NavLink>
-                        <NavLink to='/'> Our way </NavLink>
-                    </ul> */}
+                    <ul>
+                        <li>
+                            <NavLink to='/'> Home </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/our-customers'> Our customers </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/about-us'> About us </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/our-way'> Our way </NavLink>
+                        </li>
+                    </ul>
                 </section>
                 <section className='container-header-button'>
-                    {/* <button>
+                    <button>
                         <Link to='/'> Schedule a meeting </Link>
-                    </button> */}
+                    </button>
                 </section>
             </nav>
         </header>
