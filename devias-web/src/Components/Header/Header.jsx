@@ -26,6 +26,7 @@ export default function Header() {
                     </Link>
                 </section>
                 <button className='menu-toggle' onClick={handleMenuToggle}>
+                    {/* Cambiar icono de menu */}
                     <span>-</span>
                 </button>
                 <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
