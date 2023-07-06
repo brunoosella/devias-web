@@ -46,7 +46,7 @@ export default function Header() {
                     </ul>
                 </section>
                 <section className='container-header-button'>
-                    <button>
+                    <button className='btn-contact'>
                         <Link to='/'> Schedule a meeting </Link>
                     </button>
                 </section>
