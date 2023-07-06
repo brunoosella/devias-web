@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 // Internal modules
 import './Header.scss'
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 // Assets
 import logo from '../../Assets/logo.png'
@@ -26,8 +27,9 @@ export default function Header() {
                     </Link>
                 </section>
                 <button className='menu-toggle' onClick={handleMenuToggle}>
-                    {/* Cambiar icono de menu */}
-                    <span>-</span>
+                    <span className='navbar-toggler-icon'>
+                        <RxHamburgerMenu />
+                    </span>
                 </button>
                 <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
                     <ul>

@@ -9,7 +9,7 @@ export default function Home(){
 
   return(
     <div id='home'>
-      <Header/>
+      <Header />
     </div>
   )
 
