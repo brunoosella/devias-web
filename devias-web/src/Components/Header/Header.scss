@@ -27,12 +27,33 @@ header {
                 img {
                     width: 160px;
                     height: 39px;
+                    @media (max-width: 600px){
+                        width: 130px;
+                        height: auto;
+                    }
+                    @media (max-width: 560px){
+                        width: 115px;
+                        height: auto;
+                    }
                 }
             }
         }
 
         .menu-toggle {
             display: none;
+            background-color: transparent;
+            color: black;
+            border: none;
+            .navbar-toggler-icon{
+                svg{
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
         }
 
         .container-header-links {
@@ -69,7 +90,9 @@ header {
                             box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
                             background-color: #FFFFFF;
                         }
-
+                        @media (max-width: 973px){
+                            margin: 0;
+                        }
                     }
                 }
             }
@@ -95,17 +118,36 @@ header {
 
                 a {
                     color: #FFFFFF;
+                    @media (max-width: 600px){
+                        font-size: 15px;
+                    }
+                    @media (max-width: 560px){
+                        font-size: 13px;
+                    }
+                    @media (max-width: 510px){
+                        font-size: 12px;
+                    }
+                    @media (max-width: 470px){
+                        font-size: 11px;
+                    }
+                    @media (max-width: 460px) {
+                        font-size: 10px;
+                    }
                 }
             }
         }
     }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 768px) {
     header {
         .container-header {
+            .container-header-logo{
+                width: 33.33%;
+            }
             .menu-toggle {
                 display: revert;
+                width: 33.33%;
             }
 
             .container-header-links {
@@ -116,7 +158,6 @@ header {
                 transition: 
                     height 1.1s ease-in-out,
                     box-shadow 1.5s ease-in-out;
-                //Ver transicion inversa
 
                 ul {
                     flex-direction: column;
@@ -136,6 +177,9 @@ header {
                 margin-top: 25px;
                 background: #FFF;
                 box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+            }
+            .container-header-button{
+                width: 33.33%;
             }
         }
     }
