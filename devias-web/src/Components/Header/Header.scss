@@ -43,11 +43,16 @@ header {
             display: none;
             background-color: transparent;
             color: black;
+            border: none;
             .navbar-toggler-icon{
                 svg{
                     height: 30px;
                     width: 30px;
                 }
+            }
+
+            &:focus {
+                outline: none;
             }
         }
 
