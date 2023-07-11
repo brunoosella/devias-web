@@ -1,4 +1,126 @@
 #home{
-  height: 100vh;
   background-color: #FAFAFA;
+  font-family: 'Ubuntu', sans-serif;
+  .PrimarySection{
+    color: #333;
+    .container{
+      .MainTitle{
+        margin: 200px 0 64px 0;
+        h1{
+          font-size: 6rem;
+          font-weight: 500;
+          margin: 0;
+          @media (max-width: 991px){
+            font-size: 3rem;
+          }
+        }
+      }
+      .SectionDescription{
+        margin-bottom: 200px;
+        h4{
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .ServicesCards{
+    margin-bottom: 200px;
+    .container{
+      .row{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;  
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+        .ContainerDevCard{
+          
+          width: 50%;
+          padding: 0 1rem;
+          .DevCard{
+            background-color: #598392;
+            padding: 48px;
+            border-radius: 10px;
+            min-height: 370px;
+            background-image: url(../../assets/background-develop.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            h2{
+              font-size: 3rem;
+              color: #FFFFFF;
+              font-weight: 500;
+              margin-bottom: 48px;
+            }
+            h3{
+              font-size: 1.5rem; 
+              font-weight: 500;
+              margin-bottom: 24px;
+              color: #FFFFFF;
+            }
+            @media (max-width: 991px){
+              min-height: 300px;
+              margin-bottom: 50px;
+              h2{
+                font-size: 2rem;
+              }
+              h3{
+                font-size: 1.2rem;
+              }
+            }
+          }
+          @media (max-width: 768px){
+            width: 100%;
+          }
+        }
+        .ContainerDesignCard{
+          
+          width: 50%;
+          padding: 0 1rem;
+          .DesignCard{
+            background-color: #EBC95C;
+            color: #333;
+            padding: 48px;
+            border-radius: 10px;
+            min-height: 370px;
+            background-image: url(../../assets/background-design.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            h2{
+              font-size: 3rem;
+              color: #333;
+              font-weight: 500;
+              margin-bottom: 48px;
+            }
+            h3{
+              font-size: 1.5rem; 
+              font-weight: 500;
+              margin-bottom: 24px;
+            }
+            @media (max-width: 991px){
+              min-height: 300px;
+              margin-bottom: 50px;
+              h2{
+                font-size: 2rem;
+              }
+              h3{
+                font-size: 1.2rem;
+              }
+            }
+          }
+          @media (max-width: 768px){
+            width: 100%;
+          }
+        }
+        @media (max-width: 768px){
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  .HighlightedProject{
+
+  }
 }

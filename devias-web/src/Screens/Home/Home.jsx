@@ -1,19 +1,111 @@
 // External modules
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // Internal modules
 import './Home.scss'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 
-export default function Home(){
+export default function Home() {
 
-  return(
-    <div id='home'>
+  return (
+    <main id='home'>
       <Header />
-      {/* content home */}
+      <section className='PrimarySection'>
+        <div className='container'>
+          <div className='MainTitle'>
+            <h1>
+              Humanizing
+              <br />
+              digital products.
+            </h1>
+          </div>
+          <div className='SectionDescription'>
+            <h4>
+              We work along our customers to deliver the best solutions.
+            </h4>
+          </div>
+        </div>
+      </section>
+      <section className='ServicesCards'>
+        <div className='container'>
+          <div className='row'>
+            <div className='ContainerDevCard'>
+              <div className='DevCard'>
+                <h2>
+                  Development.
+                </h2>
+                <h3>
+                  Back-End Development
+                </h3>
+                <h3>
+                  Front-End Development
+                </h3>
+                <h3>
+                  iOS / Android Development
+                </h3>
+              </div>
+            </div>
+            <div className='ContainerDesignCard'>
+              <div className='DesignCard'>
+                <h2>
+                  Design
+                </h2>
+                <h3>
+                  UX Design
+                </h3>
+                <h3>
+                  UI Design
+                </h3>
+                <h3>
+                  Wireframes
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='HighlightedProject'>
+        <div className='container'>
+          <h2>
+            Check out our projects.
+          </h2>
+          <div className='ProjectDetails'>
+            <div className='ProjectThumbnail'>
+              <Link>
+                <img src="" alt="" />
+              </Link>
+            </div>
+            <div className='ContainInfo'>
+              <div className='ProjectTitle'>
+                <Link>
+                  Bucked Up
+                </Link>
+              </div>
+              <div className='ProjectDescription'>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.
+                </p>
+              </div>
+              <div className='ProjectButtons'>
+                <div className='ReadMore'>
+                  <Link>
+                    Read More
+                  </Link>
+                </div>
+                <div className='SeeAll'>
+                  <Link>
+                    See all projects
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
-    </div>
+    </main>
   )
 
 }
