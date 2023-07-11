@@ -11,7 +11,7 @@ import logo from '../../Assets/logo.png'
 export default function Footer() {
     return (
         <footer>
-            <section className='footer-container'>
+            <section className='container'>
                 <div className='container-footer-links'>
                     <ul>
                         <li>
@@ -27,11 +27,6 @@ export default function Footer() {
                             <NavLink to='/careers'> Careers </NavLink>
                         </li>
                     </ul>
-                </div>
-                <div className='container-footer-contact'>
-                    <button className='btn-contact'>
-                        <Link to='/'> Schedule a meeting </Link>
-                    </button>
                 </div>
                 <div className='container-footer-logo'>
                     <Link to='/'>
