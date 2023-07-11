@@ -12,7 +12,6 @@ export default function Home(){
     <div id='home'>
       <Header />
       {/* content home */}
-      <div id='prueba'><h1></h1></div>
       <Footer />
     </div>
   )
