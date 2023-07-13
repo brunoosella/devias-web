@@ -1,9 +1,10 @@
 // External Modules
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React from 'react'
+
 
 // Internal modules
 import './Header.scss'
+import { Link, NavLink } from 'react-router-dom'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
 // Assets
@@ -12,7 +13,7 @@ import logo from '../../Assets/logo.png'
 export default function Header() {
 
   // Local state
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   // Methods
   const handleMenuToggle = () => {

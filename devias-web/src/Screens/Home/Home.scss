@@ -121,6 +121,19 @@
     }
   }
   .HighlightedProject{
-
+      padding: 115px 0 115px 0;
+      color: #FFFFFF !important;
+      background-image: url(../../Assets/background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      h2{
+        font-size: 3rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        @media (max-width: 991px){
+          color: #333;
+          font-size: 2rem;
+      }
+      }
   }
 }

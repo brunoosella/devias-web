@@ -1,11 +1,11 @@
 // External modules
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 // Internal modules
 import './Home.scss'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
+import ProjectDetails from '../../Components/ProjectDetails/ProjectDetails'
 
 export default function Home() {
 
@@ -71,37 +71,7 @@ export default function Home() {
           <h2>
             Check out our projects.
           </h2>
-          <div className='ProjectDetails'>
-            <div className='ProjectThumbnail'>
-              <Link>
-                <img src="" alt="" />
-              </Link>
-            </div>
-            <div className='ContainInfo'>
-              <div className='ProjectTitle'>
-                <Link>
-                  Bucked Up
-                </Link>
-              </div>
-              <div className='ProjectDescription'>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.
-                </p>
-              </div>
-              <div className='ProjectButtons'>
-                <div className='ReadMore'>
-                  <Link>
-                    Read More
-                  </Link>
-                </div>
-                <div className='SeeAll'>
-                  <Link>
-                    See all projects
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectDetails/>
         </div>
       </section>
       <Footer />
