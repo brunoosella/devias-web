@@ -71,7 +71,7 @@ export default function Home() {
           <h2>
             Check out our projects.
           </h2>
-          <ProjectDetails/>
+          <ProjectDetails />
         </div>
       </section>
       <Footer />
