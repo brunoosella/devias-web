@@ -1,11 +1,10 @@
 // External Modules
 import React from 'react'
 
-
 // Internal modules
 import './Header.scss'
-import { Link, NavLink } from 'react-router-dom'
-import { RxHamburgerMenu } from 'react-icons/rx'
+import {Link, NavLink} from 'react-router-dom'
+import {RxHamburgerMenu} from 'react-icons/rx'
 
 // Assets
 import logo from '../../Assets/logo.png'
@@ -49,7 +48,7 @@ export default function Header() {
               <li>
                 <NavLink to='/contact-us'> Contact us </NavLink>
               </li>
-              <li className='line'></li>
+              <li className='line' />
               <li className='container-btn-contact'>
                 <Link id='btn-contact' to='/'> Schedule a meeting </Link>
               </li>
