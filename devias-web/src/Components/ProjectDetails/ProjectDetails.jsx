@@ -14,30 +14,30 @@ export default function ProjectDetails() {
 
   return (
     projects.map((project, index) => (
-      <div key={index} className='ProjectDetails'>
-        <div className='ProjectThumbnail'>
+      <div key={index} className='project-detail'>
+        <div className='project-thumbnail'>
           <Link to={project.link}>
             <img src={project.img} alt={project.name} />
           </Link>
         </div>
-        <div className='ContainInfo'>
-          <div className='ProjectTitle'>
+        <div className='contain-info'>
+          <div className='project-title'>
             <Link to={project.link}>
               {project.name}
             </Link>
           </div>
-          <div className='ProjectDescription'>
+          <div className='project-description'>
             <p>
               {project.description}
             </p>
           </div>
-          <div className='ProjectButtons'>
-            <div className='ReadMore'>
+          <div className='project-buttons'>
+            <div className='read-more'>
               <Link to={project.link}>
                 Read More
               </Link>
             </div>
-            <div className='SeeAll'>
+            <div className='see-all'>
               <Link to={project.link}>
                 See all projects
               </Link>

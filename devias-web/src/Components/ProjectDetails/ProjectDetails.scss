@@ -1,9 +1,9 @@
-.ProjectDetails {
+.project-detail {
     display: flex;
     flex-direction: row;
     margin-top: 52px;
 
-    .ProjectThumbnail {
+    .project-thumbnail {
         width: 33.33%;
         padding: 0 1rem;
         a {
@@ -24,10 +24,10 @@
         }
     }
 
-    .ContainInfo {
+    .contain-info {
         width: 33.33%;
         padding: 0 1rem;
-        .ProjectTitle {
+        .project-title {
             font-size: 2.25rem;
             margin-bottom: 18px;
 
@@ -37,16 +37,16 @@
             }
         }
 
-        .ProjectDescription {
+        .project-description {
             font-family: 'Roboto', sans-serif;
             font-size: 1.125rem;
         }
 
-        .ProjectButtons {
+        .project-buttons {
             display: flex;
             margin-top: 24px;
 
-            .ReadMore {
+            .read-more {
                 a{
                     font-size: 1.125rem;
                     margin-right: 24px;
@@ -58,7 +58,7 @@
                     text-decoration: none;
                 }
             }
-            .SeeAll{
+            .see-all{
                 a{
                     font-size: 1.125rem;
                     padding: 0.6rem 0.9rem;
