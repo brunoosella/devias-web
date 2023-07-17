@@ -21,12 +21,18 @@
           margin-bottom: 0.5rem;
           font-weight: 500;
           line-height: 1.2;
+
+          @media (max-width: 991px){
+            font-size: 3rem;
+          }
         }
       }
     }
   }
 
   .info {
+    margin-bottom: 5rem;
+
     .container {
       .container-card {
         width: 100%;
@@ -37,13 +43,17 @@
           font-family: 'Roboto', sans-serif;
           font-size: 1.5rem;
           color: #333;
-          background-image: url(https://i.imgur.com/BZvjxOJ.png);
+          background-image: url('https://i.imgur.com/BZvjxOJ.png');
           background-position: right bottom;
           background-repeat: no-repeat;
           border-radius: 10px;
           box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.25);
 
-          p{
+          @media (max-width: 768px) {
+            padding: 50px;
+          }
+
+          p {
             margin-top: 0;
             margin-bottom: 1rem;
           }
@@ -54,8 +64,21 @@
 
   .container-project-detail {
     padding: 115px 0 115px 0;
-    .container{
-      
+    color: #FFFFFF !important;
+    background-image: url(../../Assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+      .project-detail {
+        .contain-info {
+          .project-buttons {
+            .see-all {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
 }
