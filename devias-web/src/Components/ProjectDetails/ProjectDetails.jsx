@@ -4,12 +4,13 @@ import {Link} from 'react-router-dom'
 
 // Internal modules
 import './ProjectDetails.scss'
-import projectsJson from './ProjectDetails.json'
+import Project from '../Project/Project'
+
 
 export default function ProjectDetails() {
 
   // Constants
-  const projects = projectsJson.proyects
+  const projects = Project().projects
 
   return (
     projects.map((project, index) => (
