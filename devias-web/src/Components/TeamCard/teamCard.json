@@ -1,0 +1,29 @@
+{
+  "team":[
+    {
+      "name": "Mauri",
+      "img": "../../assets/mauri.png"
+    },{
+      "name": "Andres",
+      "img": "../../assets/andres.png"
+    },{
+      "name": "Vicky",
+      "img": "../../assets/vicky.png"
+    },{
+      "name": "Juanca",
+      "img": "../../assets/juanca.png"
+    },{
+      "name": "Guly",
+      "img": "../../assets/guly.png"
+    },{
+      "name": "Vilma",
+      "img": "../../assets/vilma.png"
+    },{
+      "name": "Bruno",
+      "img": "../../assets/bruno.png"
+    },{
+      "name": "Rafa",
+      "img": "../../assets/rafa.png"
+    }
+  ]
+}
