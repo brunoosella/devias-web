@@ -1,6 +1,5 @@
 // External Modules
 import React from 'react'
-import {CSSTransition} from 'react-transition-group'
 
 // Internal modules
 import './Header.scss'
@@ -42,32 +41,30 @@ export default function Header() {
           </button>
 
           {/* NavBar */}
-          <CSSTransition in={isOpen} unmountOnExit timeout={0}>
+          <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
+            <ul>
+              <li>
+                <NavLink to='/'> Home </NavLink>
+              </li>
+              <li>
+                <NavLink to='/our-customers'> Our customers </NavLink>
+              </li>
+              <li>
+                <NavLink to='/about-us'> About us </NavLink>
+              </li>
+              <li>
+                <NavLink to='/our-way'> Our way </NavLink>
+              </li>
+              <li>
+                <NavLink to='/contact-us'> Contact us </NavLink>
+              </li>
+              <li className='line' />
 
-            <section className='container-header-links'>
-              <ul>
-                <li>
-                  <NavLink to='/'> Home </NavLink>
-                </li>
-                <li>
-                  <NavLink to='/our-customers'> Our customers </NavLink>
-                </li>
-                <li>
-                  <NavLink to='/about-us'> About us </NavLink>
-                </li>
-                <li>
-                  <NavLink to='/our-way'> Our way </NavLink>
-                </li>
-                <li>
-                  <NavLink to='/contact-us'> Contact us </NavLink>
-                </li>
-                <li className='line' />
-                <li className='container-btn-contact'>
-                  <Link id='btn-contact' to='/'> Schedule a meeting </Link>
-                </li>
-              </ul>
-            </section>
-          </CSSTransition>
+              <li className='container-btn-contact'>
+                <Link id='btn-contact' to='/'> Schedule a meeting </Link>
+              </li>
+            </ul>
+          </section>
 
         </div>
       </nav>

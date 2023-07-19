@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom'
 import './ProjectDetails.scss'
 import Project from '../Project/Project'
 
-
 export default function ProjectDetails() {
 
   // Constants
