@@ -2,28 +2,44 @@
   "team":[
     {
       "name": "Mauri",
-      "img": "../../assets/mauri.png"
+      "img": 0,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Andres",
-      "img": "../../assets/andres.png"
+      "img": 1,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Vicky",
-      "img": "../../assets/vicky.png"
+      "img": 2,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Juanca",
-      "img": "../../assets/juanca.png"
+      "img": 3,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Guly",
-      "img": "../../assets/guly.png"
+      "img": 4,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Vilma",
-      "img": "../../assets/vilma.png"
+      "img": 5,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Bruno",
-      "img": "../../assets/bruno.png"
+      "img": 6,
+      "job": "Puesto",
+      "description": "Description of job"
     },{
       "name": "Rafa",
-      "img": "../../assets/rafa.png"
+      "img": 7,
+      "job": "Puesto",
+      "description": "Description of job"
     }
   ]
 }

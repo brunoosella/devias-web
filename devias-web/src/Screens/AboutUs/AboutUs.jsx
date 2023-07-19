@@ -7,6 +7,8 @@ import TeamCard from '../../Components/TeamCard/TeamCard'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 
+
+
 export default function AboutUs() {
   return (
     <main id='about-us'>
