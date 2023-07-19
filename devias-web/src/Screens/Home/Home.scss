@@ -1,11 +1,12 @@
 #home{
   background-color: #FAFAFA;
   font-family: 'Ubuntu', sans-serif;
+
   .PrimarySection{
     color: #333;
     .container{
       .MainTitle{
-        margin: 200px 0 64px 0;
+        margin: 100px 0 64px 0;
         h1{
           font-size: 6rem;
           font-weight: 500;
@@ -14,12 +15,19 @@
             font-size: 3rem;
           }
         }
+        @media all and (max-width: 768px) {
+          margin-top: 0px;
+        }
       }
       .SectionDescription{
         margin-bottom: 200px;
         h4{
           font-size: 1.5rem;
           font-weight: 500;
+        }
+
+        @media all and (max-width: 768px) {
+          margin-bottom: 50px;
         }
       }
     }

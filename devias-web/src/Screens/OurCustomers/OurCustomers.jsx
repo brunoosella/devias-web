@@ -1,7 +1,9 @@
+// External Modules
 import React from 'react'
-import ProjectDetails from '../../Components/ProjectDetails/ProjectDetails'
 
+// Internal modules
 import './OurCustomers.scss'
+import ProjectDetails from '../../Components/ProjectDetails/ProjectDetails'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 
