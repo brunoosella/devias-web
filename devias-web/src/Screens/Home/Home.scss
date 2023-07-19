@@ -1,11 +1,12 @@
 #home{
   background-color: #FAFAFA;
   font-family: 'Ubuntu', sans-serif;
+
   .PrimarySection{
     color: #333;
     .container{
       .MainTitle{
-        margin: 200px 0 64px 0;
+        margin: 100px 0 64px 0;
         h1{
           font-size: 6rem;
           font-weight: 500;
@@ -14,12 +15,19 @@
             font-size: 3rem;
           }
         }
+        @media all and (max-width: 768px) {
+          margin-top: 0px;
+        }
       }
       .SectionDescription{
         margin-bottom: 200px;
         h4{
           font-size: 1.5rem;
           font-weight: 500;
+        }
+
+        @media all and (max-width: 768px) {
+          margin-bottom: 50px;
         }
       }
     }
@@ -47,6 +55,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
+            transition: ease 0.2s;
             h2{
               font-size: 3rem;
               color: #FFFFFF;
@@ -68,6 +77,10 @@
               h3{
                 font-size: 1.2rem;
               }
+            }
+            &:hover{
+              transform: scale(1.02);
+              box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
             }
           }
           @media (max-width: 768px){
@@ -88,6 +101,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
+            transition: ease 0.2s;
             h2{
               font-size: 3rem;
               color: #333;
@@ -108,6 +122,10 @@
               h3{
                 font-size: 1.2rem;
               }
+            }
+            &:hover{
+              transform: scale(1.02);
+              box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
             }
           }
           @media (max-width: 768px){
