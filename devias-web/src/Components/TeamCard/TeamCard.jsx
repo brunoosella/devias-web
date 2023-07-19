@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Internal modules
+import './TeamCard.scss'
 import teamJSON from './teamCard.json'
 
 export default function TeamCard() {

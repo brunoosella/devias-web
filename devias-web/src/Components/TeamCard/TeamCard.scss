@@ -1,0 +1,15 @@
+.card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .profile-picture{
+    img{
+
+    }
+  }
+  .profile-description{
+    p{
+      color: #828282;
+    }
+  }
+}

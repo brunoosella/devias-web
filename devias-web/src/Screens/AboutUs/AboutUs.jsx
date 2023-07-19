@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Internal modules
+import './AboutUs.scss'
 import TeamCard from '../../Components/TeamCard/TeamCard'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
