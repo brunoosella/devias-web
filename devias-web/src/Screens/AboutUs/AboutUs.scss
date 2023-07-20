@@ -21,14 +21,25 @@
           margin-bottom: 0.5rem;
           font-weight: 500;
           line-height: 1.2;
+
+          @media (max-width: 991px) {
+            font-size: 3rem;
+          }
+          @media (max-width: 419px) {
+            font-size: 2.8rem;
+          }
         }
       }
+    }
+    @media (max-width: 991px){
+      margin: 5rem 0;
     }
   }
   .section-info{
     .container{
       .container-card{
         width: 100%;
+        transition: ease 0.2s;
         .text-card{
           padding: 140px;
           background-color: #fff;
@@ -40,10 +51,20 @@
           background-repeat: no-repeat;
           border-radius: 10px;
           box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.25);
+
+          @media (max-width: 768px) {
+            padding: 50px;
+          }
+
           p{
             margin-top: 0;
             margin-bottom: 1rem;
           }
+        }
+        
+        &:hover{
+          transform: scale(1.01);
+          box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
         }
       }
     }
@@ -55,6 +76,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding-bottom: 3rem;
+        margin: 0 5rem;
+        gap: 1rem;
+        
+        @media (max-width: 991px){
+          margin: 0;
+        }
       }
     }
   }

@@ -39,6 +39,7 @@ export default function TeamCard() {
         <div className='profile-description'>
           <h4>{profile.name}</h4>
           <h5>{profile.job}</h5>
+          <p className='line'></p>
           <p> {profile.description} </p>
         </div>
       </div>
