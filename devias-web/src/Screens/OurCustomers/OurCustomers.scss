@@ -26,6 +26,10 @@
             font-size: 3rem;
           }
         }
+
+        @media (max-width: 991px){
+          margin: 5rem 0;
+        }
       }
     }
   }
