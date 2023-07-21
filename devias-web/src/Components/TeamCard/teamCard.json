@@ -1,0 +1,45 @@
+{
+  "team":[
+    {
+      "name": "Mauri",
+      "img": 0,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Andres",
+      "img": 1,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Vicky",
+      "img": 2,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Juanca",
+      "img": 3,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Guly",
+      "img": 4,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Vilma",
+      "img": 5,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Bruno",
+      "img": 6,
+      "job": "Puesto",
+      "description": "Description of job"
+    },{
+      "name": "Rafa",
+      "img": 7,
+      "job": "Puesto",
+      "description": "Description of job"
+    }
+  ]
+}
