@@ -5,6 +5,7 @@ import React from 'react'
 import './OurWay.scss'
 import ProjectDetails from '../../Components/ProjectDetails/ProjectDetails'
 import Header from '../../Components/Header/Header'
+import ItemStep from '../../Components/ItemStep/ItemStep'
 import Footer from '../../Components/Footer/Footer'
 
 export default function OurWay () {
@@ -31,7 +32,7 @@ export default function OurWay () {
       <section className='process-steps'>
         <div className='container'>
           <div className='container-steps'>
-            
+            <ItemStep />
           </div>
         </div>
       </section>

@@ -13,35 +13,41 @@ export default function ItemStep() {
   const [isOpen, setIsOpen] = React.useState(false)
 
   // Methods
-  const handleStepToggle = () => {
+  const handleStepToggle = (number) => {
 
-    setIsOpen(!isOpen)
+    setIsOpen((prevState) => ({
+      ...prevState,
+      [number]: !prevState[number],
+    }));
 
   }
 
   return (
-    step.map((item, index) => {
+    step.map((item, index) => (
       <div key={index} className='item-step'>
         
         {/* Step button responsive */}
-        <button className='toggle-step' onClick={handleStepToggle}>
+        <button className='toggle-step' onClick={() => handleStepToggle(item.number)}>
           <div className='step'>
             <span className='step-number'>
-              {item.number}
+              0{item.number}
             </span>
             <span className='step-name'>
               {item.name}
             </span>
           </div>
+          <div className='flecha'>
+            {isOpen[item.number] ? '▲' : '▼'}
+          </div>
         </button>
 
         {/* Step description */}
-        <div className={`container-step-description ${isOpen ? 'show' : ''}`}>
+        <div className={`container-step-description  ${isOpen[item.number] ? 'show' : ''}`}>
           <p className='step-description'>
             {item.description}
           </p>
         </div>
       </div>
-    })
+    ))
   )
 }
