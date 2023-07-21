@@ -9,10 +9,22 @@ export default function ItemStep() {
   // Constants
   const step = itemStepJson.items
 
+  // Local state
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  // Methods
+  const handleStepToggle = () => {
+
+    setIsOpen(!isOpen)
+
+  }
+
   return (
     step.map((item, index) => {
       <div key={index} className='item-step'>
-        <button className='show'>
+        
+        {/* Step button responsive */}
+        <button className='toggle-step' onClick={handleStepToggle}>
           <div className='step'>
             <span className='step-number'>
               {item.number}
@@ -22,7 +34,9 @@ export default function ItemStep() {
             </span>
           </div>
         </button>
-        <div className='container-step-description'>
+
+        {/* Step description */}
+        <div className={`container-step-description ${isOpen ? 'show' : ''}`}>
           <p className='step-description'>
             {item.description}
           </p>
