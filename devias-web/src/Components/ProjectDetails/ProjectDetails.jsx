@@ -4,39 +4,43 @@ import {Link} from 'react-router-dom'
 
 // Internal modules
 import './ProjectDetails.scss'
-import projectsJson from './ProjectDetails.json'
+import Project from '../Project/Project'
 
 export default function ProjectDetails() {
 
   // Constants
-  const projects = projectsJson.proyects
+  const projects = Project().projects
 
   return (
     projects.map((project, index) => (
-      <div key={index} className='ProjectDetails'>
-        <div className='ProjectThumbnail'>
+      <div key={index} className='project-detail'>
+        {/* Link image */}
+        <div className='project-thumbnail'>
           <Link to={project.link}>
             <img src={project.img} alt={project.name} />
           </Link>
         </div>
-        <div className='ContainInfo'>
-          <div className='ProjectTitle'>
+        {/* Contain Info */}
+        <div className='contain-info'>
+          <div className='project-title'>
             <Link to={project.link}>
               {project.name}
             </Link>
           </div>
-          <div className='ProjectDescription'>
+          {/* Description */}
+          <div className='project-description'>
             <p>
               {project.description}
             </p>
           </div>
-          <div className='ProjectButtons'>
-            <div className='ReadMore'>
+          {/* Buttons */}
+          <div className='project-buttons'>
+            <div className='read-more'>
               <Link to={project.link}>
                 Read More
               </Link>
             </div>
-            <div className='SeeAll'>
+            <div className='see-all'>
               <Link to={project.link}>
                 See all projects
               </Link>
