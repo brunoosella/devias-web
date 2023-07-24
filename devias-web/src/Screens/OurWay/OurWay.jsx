@@ -22,11 +22,6 @@ export default function OurWay () {
               This is how we work.
             </h1>
           </div>
-          <div className='section-description'>
-            <h4>
-              We work along our customers to deliver the best solutions.
-            </h4>
-          </div>
         </div>
       </section>
       <section className='process-steps'>

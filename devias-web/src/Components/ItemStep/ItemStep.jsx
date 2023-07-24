@@ -4,13 +4,14 @@ import React from 'react'
 //Internal modules
 import './ItemStep.scss'
 import itemStepJson from './itemStep.json'
+import {GoChevronDown} from 'react-icons/go'
 
 export default function ItemStep() {
   // Constants
   const step = itemStepJson.items
 
   // Local state
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState({})
 
   // Methods
   const handleStepToggle = (number) => {
@@ -36,13 +37,13 @@ export default function ItemStep() {
               {item.name}
             </span>
           </div>
-          <div className='flecha'>
-            {isOpen[item.number] ? '▲' : '▼'}
+          <div className={`arrow ${isOpen[item.number] ? 'show' : ''}`}>
+            <GoChevronDown/>
           </div>
         </button>
 
         {/* Step description */}
-        <div className={`container-step-description  ${isOpen[item.number] ? 'show' : ''}`}>
+        <div className={`container-step-description ${isOpen[item.number] ? 'show' : ''}`}>
           <p className='step-description'>
             {item.description}
           </p>

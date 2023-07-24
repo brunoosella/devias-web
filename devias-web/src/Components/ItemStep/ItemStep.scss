@@ -26,24 +26,45 @@
       }
     }
 
-    .flecha {}
+    .arrow {
+      transition: .35s;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        color: #828282;
+      }
+
+      &.show {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .container-step-description{
+  .container-step-description {
     display: none;
-    padding: 1rem 1.25rem;
-    transition:
-            height 0.5s ease-out;
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
 
-    .step-description{
+
+    .step-description {
       color: #333;
       margin: 0;
+      padding: 1rem 1.25rem;
     }
 
-    &.show{
+    &.show {
       display: flex;
-      height: 100px;
-      transition: height 0.5s ease-in;
+      height: auto;
     }
   }
-  }
+}
