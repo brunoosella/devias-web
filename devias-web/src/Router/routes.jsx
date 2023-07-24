@@ -27,6 +27,11 @@ const routes = [
     path: '/our-way',
     component: <OurWay />,
     exact:true
+  },
+  {
+    path: '/contact-us',
+    component: <ContactUs />,
+    exact:true
   }
 ]
 
