@@ -29,6 +29,10 @@
           font-weight: 300;
           color: #828282;
         }
+
+        @media (max-width: 991px){
+          margin: 5rem 0;
+        }
       }
 
       .section-description {
