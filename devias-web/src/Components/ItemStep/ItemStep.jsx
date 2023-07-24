@@ -25,7 +25,7 @@ export default function ItemStep() {
 
   return (
     step.map((item, index) => (
-      <div key={index} className='item-step'>
+      <div key={index} className={`item-step step-${item.number}`}>
         
         {/* Step button responsive */}
         <button className='toggle-step' onClick={() => handleStepToggle(item.number)}>
