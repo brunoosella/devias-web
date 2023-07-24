@@ -1,6 +1,7 @@
 .item-step {
   border: 0.5px solid #9d9d9d40;
 
+  /* Button responsive */
   .toggle-step {
     display: flex;
     align-items: center;
@@ -51,13 +52,14 @@
     }
   }
 
+  /* Content step */
   .container-step-description {
     height: 0;
     border-top: 0;
     overflow: hidden;
     transition:
-        height .35s ease,
-        border-top .35s ease;
+      height .35s ease,
+      border-top .35s ease;
 
     .step-description {
       color: #333;
@@ -69,7 +71,7 @@
       display: flex;
       height: 100px;
       border-top: 0.5px solid #9d9d9d40;
-      
+
     }
   }
 

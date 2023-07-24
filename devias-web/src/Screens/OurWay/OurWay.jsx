@@ -8,10 +8,11 @@ import Header from '../../Components/Header/Header'
 import ItemStep from '../../Components/ItemStep/ItemStep'
 import Footer from '../../Components/Footer/Footer'
 
-export default function OurWay () {
+export default function OurWay() {
   return (
     <main id='our-way'>
       <Header />
+      {/* Section title */}
       <section className='primari-section'>
         <div className='container'>
           <div className='main-title'>
@@ -24,6 +25,7 @@ export default function OurWay () {
           </div>
         </div>
       </section>
+      {/* Section steps */}
       <section className='process-steps'>
         <div className='container'>
           <div className='container-steps'>
@@ -31,6 +33,7 @@ export default function OurWay () {
           </div>
         </div>
       </section>
+      {/* Section cards */}
       <section className='services-cards'>
         <div className='container'>
           <div className='row'>
@@ -69,6 +72,7 @@ export default function OurWay () {
           </div>
         </div>
       </section>
+      {/* Section projects */}
       <section className='highlighted-project'>
         <div className='container'>
           <h2>
