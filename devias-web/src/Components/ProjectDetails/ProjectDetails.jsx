@@ -41,7 +41,7 @@ export default function ProjectDetails() {
               </Link>
             </div>
             <div className='see-all'>
-              <Link to={project.link}>
+              <Link to='/our-customers'>
                 See all projects
               </Link>
             </div>
@@ -50,5 +50,4 @@ export default function ProjectDetails() {
       </div>
     ))
   )
-
 }

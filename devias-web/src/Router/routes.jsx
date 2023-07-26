@@ -6,6 +6,7 @@ import Home from '../Screens/Home/Home'
 import OurCustomers from '../Screens/OurCustomers/OurCustomers'
 import AboutUs from '../Screens/AboutUs/AboutUs'
 import OurWay from '../Screens/OurWay/OurWay'
+import ContactUs from '../Screens/ContactUs/ContactUs'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
   {
     path: '/our-way',
     component: <OurWay />,
+    exact:true
+  },
+  {
+    path: '/contact-us',
+    component: <ContactUs />,
     exact:true
   }
 ]
