@@ -36,7 +36,7 @@ export default function ProjectDetails() {
           {/* Buttons */}
           <div className='project-buttons'>
             <div className='read-more'>
-              <Link to={project.link}>
+              <Link to={`/costumer/${project.code}`}>
                 Read More
               </Link>
             </div>

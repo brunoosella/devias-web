@@ -7,6 +7,7 @@ import OurCustomers from '../Screens/OurCustomers/OurCustomers'
 import AboutUs from '../Screens/AboutUs/AboutUs'
 import OurWay from '../Screens/OurWay/OurWay'
 import ContactUs from '../Screens/ContactUs/ContactUs'
+import Costumer from '../Screens/OurCustomers/Costumer/Costumer'
 
 const routes = [
   {
@@ -33,7 +34,13 @@ const routes = [
     path: '/contact-us',
     component: <ContactUs />,
     exact:true
+  },
+  {
+    path: '/costumer/:client',
+    component: <Costumer />,
+    exact:true
   }
+  
 ]
 
 export default routes
