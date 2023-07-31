@@ -1,18 +1,42 @@
 // External Modules
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {useParams} from 'react-router'
 
 // Internal modules
 import './ProjectDetails.scss'
-import Project from '../Project/Project'
+import json from './project.json'
 
-export default function ProjectDetails() {
+export default function ProjectDetails({customerView}) {
+
+  // Local State
+  const [projectsList, setProjectsList] = React.useState([])
 
   // Constants
-  const projects = Project().projects
+  const {client} = useParams()
+
+  React.useEffect(() => {
+
+    if(customerView) {
+
+      if (customerView) {
+
+        const newList = json.projects.filter(item => item.code !== client)
+
+        setProjectsList(newList)
+
+      }
+
+    } else {
+
+      setProjectsList(json.projects)
+
+    }
+
+  }, [client])
 
   return (
-    projects.map((project, index) => (
+    projectsList?.map((project, index) => (
       <div key={index} className='project-detail'>
         {/* Link image */}
         <div className='project-thumbnail'>
@@ -50,4 +74,5 @@ export default function ProjectDetails() {
       </div>
     ))
   )
+
 }

@@ -8,6 +8,7 @@ import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 
 export default function OurCustomers() {
+
   return (
     <main id='our-customers'>
       {/* Header */}
@@ -48,4 +49,5 @@ export default function OurCustomers() {
       <Footer />
     </main>
   )
+
 }

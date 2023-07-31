@@ -1,27 +1,27 @@
 // External modules
 import React from 'react'
-import { useParams } from 'react-router'
+import {useParams} from 'react-router'
 
 // Internal modules
 import './Customer.scss'
-import Project from '../../../Components/Project/Project'
 import Header from '../../../Components/Header/Header'
 import Footer from '../../../Components/Footer/Footer'
 import ProjectDetails from '../../../Components/ProjectDetails/ProjectDetails'
-
+import json from '../../../Components/ProjectDetails/project.json'
 
 export default function Costumer() {
 
   // Constants
-  const projects = Project().projects
+  const projects = json.projects
+  const isInCustomerView = true
 
-  const { client } = useParams()
+  const {client} = useParams()
 
   const customer = projects.filter(project => project.code === client)
 
   return (
     customer.map((customer, index) => (
-      <main key={index} id="customer-single-page">
+      <main key={index} id='customer-single-page'>
         <Header />
         {/* Section title */}
         <section className='section-title'>
@@ -79,11 +79,12 @@ export default function Costumer() {
             <h2>
               Check out our projects.
             </h2>
-            <ProjectDetails />
+            <ProjectDetails customerView={isInCustomerView} />
           </div>
         </section>
         <Footer />
       </main>
     ))
   )
+
 }
