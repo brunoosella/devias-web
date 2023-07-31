@@ -23,6 +23,7 @@ export default function Costumer() {
     customer.map((customer, index) => (
       <main key={index} id="customer-single-page">
         <Header />
+        {/* Section title */}
         <section className='section-title'>
           <div className='container'>
             <div className='main-title'>
@@ -35,6 +36,7 @@ export default function Costumer() {
             </div>
           </div>
         </section>
+        {/* Section post */}
         <section className='post-content'>
           <div className='container'>
             <div className='contain-content'>
@@ -53,28 +55,32 @@ export default function Costumer() {
             </div>
           </div>
         </section>
+        {/* Section stech */}
         <section className='tech-stack'>
-          <div className='contain-tech'>
-            <div className='tech-title'>
-              <h2>
-                Tech stack.
-              </h2>
-            </div>
-            <div className='tech-card'>
-              <img src={customer['tech-img']} alt={customer['tech-name']} />
-              <p>
-                {customer['tech-name']}
-              </p>
+          <div className='container'>
+            <div className='contain-tech'>
+              <div className='tech-title'>
+                <h2>
+                  Tech stack.
+                </h2>
+              </div>
+              <div className='tech-card'>
+                <img src={customer['tech-img']} alt={customer['tech-name']} />
+                <p>
+                  {customer['tech-name']}
+                </p>
+              </div>
             </div>
           </div>
         </section>
+        {/* Section projects */}
         <section className='highlighted-project'>
-        <div className='container'>
-          <h2>
-            Check out our projects.
-          </h2>
-          <ProjectDetails />
-        </div>
+          <div className='container'>
+            <h2>
+              Check out our projects.
+            </h2>
+            <ProjectDetails />
+          </div>
         </section>
         <Footer />
       </main>
