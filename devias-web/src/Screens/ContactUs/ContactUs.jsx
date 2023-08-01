@@ -7,6 +7,7 @@ import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 
 export default function ContactUs() {
+  // Constants
   const calendlyLink = 'https://calendly.com/nicovillegas650/30min';
 
   return (
