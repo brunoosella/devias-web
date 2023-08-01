@@ -1,8 +1,8 @@
-#contact-us{
+#contact-us {
   background-color: #FAFAFA;
   font-family: 'Ubuntu', sans-serif;
 
-  .section-title{
+  .section-title {
     color: #333;
 
     .main-title {
@@ -29,8 +29,20 @@
         color: #828282;
       }
 
-      @media (max-width: 991px){
+      @media (max-width: 991px) {
         margin: 5rem 0;
+      }
+    }
+  }
+
+  .calendly {
+    .container {
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.125rem;
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 1rem;
       }
     }
   }
