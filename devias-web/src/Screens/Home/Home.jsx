@@ -16,7 +16,7 @@ export default function Home() {
         <div className='container'>
           <div className='MainTitle'>
             <h1>
-              Humanizing
+              PROOF
               <br />
               digital products.
             </h1>
