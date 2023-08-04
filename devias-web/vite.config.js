@@ -12,5 +12,8 @@ export default defineConfig({
       Router: path.resolve(__dirname, 'src/Router'),
       Screens: path.resolve(__dirname, 'src/Screens')
     }
+  },
+  build: {
+    assetsDir: 'assets'
   }
 })
