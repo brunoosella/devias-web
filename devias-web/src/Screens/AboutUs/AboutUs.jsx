@@ -3,13 +3,12 @@ import React from 'react'
 
 // Internal modules
 import './AboutUs.scss'
-import TeamCard from '../../Components/TeamCard/TeamCard'
-import Header from '../../Components/Header/Header'
-import Footer from '../../Components/Footer/Footer'
-
-
+import TeamCard from 'Components/TeamCard/TeamCard'
+import Header from 'Components/Header/Header'
+import Footer from 'Components/Footer/Footer'
 
 export default function AboutUs() {
+
   return (
     <main id='about-us'>
       <Header />
@@ -45,4 +44,5 @@ export default function AboutUs() {
       <Footer />
     </main>
   )
+
 }

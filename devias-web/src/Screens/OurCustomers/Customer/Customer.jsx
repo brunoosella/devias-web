@@ -4,10 +4,10 @@ import {useParams} from 'react-router'
 
 // Internal modules
 import './Customer.scss'
-import Header from '../../../Components/Header/Header'
-import Footer from '../../../Components/Footer/Footer'
-import ProjectDetails from '../../../Components/ProjectDetails/ProjectDetails'
-import json from '../../../Components/ProjectDetails/project.json'
+import Header from 'Components/Header/Header'
+import Footer from 'Components/Footer/Footer'
+import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
+import json from 'Components/ProjectDetails/project.json'
 
 export default function Costumer() {
 

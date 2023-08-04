@@ -7,6 +7,7 @@ import itemStepJson from './itemStep.json'
 import {GoChevronDown} from 'react-icons/go'
 
 export default function ItemStep() {
+
   // Constants
   const step = itemStepJson.items
 
@@ -18,15 +19,15 @@ export default function ItemStep() {
 
     setIsOpen((prevState) => ({
       ...prevState,
-      [number]: !prevState[number],
-    }));
+      [number]: !prevState[number]
+    }))
 
   }
 
   return (
     step.map((item, index) => (
       <div key={index} className={`item-step step-${item.number}`}>
-        
+
         {/* Step button responsive */}
         <button className='toggle-step' onClick={() => handleStepToggle(item.number)}>
           <div className='step'>
@@ -38,7 +39,7 @@ export default function ItemStep() {
             </span>
           </div>
           <div className={`arrow ${isOpen[item.number] ? 'show' : ''}`}>
-            <GoChevronDown/>
+            <GoChevronDown />
           </div>
         </button>
 
@@ -51,4 +52,5 @@ export default function ItemStep() {
       </div>
     ))
   )
+
 }

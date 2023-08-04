@@ -3,12 +3,13 @@ import React from 'react'
 
 // Internal modules
 import './OurWay.scss'
-import ProjectDetails from '../../Components/ProjectDetails/ProjectDetails'
-import Header from '../../Components/Header/Header'
-import ItemStep from '../../Components/ItemStep/ItemStep'
-import Footer from '../../Components/Footer/Footer'
+import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
+import Header from 'Components/Header/Header'
+import ItemStep from 'Components/ItemStep/ItemStep'
+import Footer from 'Components/Footer/Footer'
 
 export default function OurWay() {
+
   return (
     <main id='our-way'>
       <Header />
@@ -84,4 +85,5 @@ export default function OurWay() {
       <Footer />
     </main>
   )
+
 }

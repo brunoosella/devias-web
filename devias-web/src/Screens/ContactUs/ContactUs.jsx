@@ -3,12 +3,13 @@ import React from 'react'
 
 // Internal modules
 import './ContactUs.scss'
-import Header from '../../Components/Header/Header'
-import Footer from '../../Components/Footer/Footer'
+import Header from 'Components/Header/Header'
+import Footer from 'Components/Footer/Footer'
 
 export default function ContactUs() {
+
   // Constants
-  const calendlyLink = 'https://calendly.com/nicovillegas650/30min';
+  const calendlyLink = 'https://calendly.com/nicovillegas650/30min'
 
   return (
     <main id='contact-us'>
@@ -36,13 +37,13 @@ export default function ContactUs() {
             We will contact you to arrange the details.
           </p>
           {/* Insert calendly */}
-          <div className="calendly-container">
+          <div className='calendly-container'>
             <iframe
-              title="Calendly"
+              title='Calendly'
               src={calendlyLink}
-              width="100%"
-              height="600"
-              frameBorder="0"
+              width='100%'
+              height='600'
+              frameBorder='0'
             />
           </div>
         </div>
@@ -50,4 +51,5 @@ export default function ContactUs() {
       <Footer />
     </main>
   )
+
 }

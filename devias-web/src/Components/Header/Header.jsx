@@ -7,7 +7,7 @@ import {Link, NavLink} from 'react-router-dom'
 import {RxHamburgerMenu} from 'react-icons/rx'
 
 // Assets
-import logo from '../../Assets/logo.png'
+import logo from 'Assets/logo.png'
 
 export default function Header() {
 

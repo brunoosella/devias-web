@@ -3,9 +3,9 @@ import React from 'react'
 
 // Internal modules
 import './Home.scss'
-import Header from '../../Components/Header/Header'
-import Footer from '../../Components/Footer/Footer'
-import ProjectDetails from '../../Components/ProjectDetails/ProjectDetails'
+import Header from 'Components/Header/Header'
+import Footer from 'Components/Footer/Footer'
+import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 
 export default function Home() {
 

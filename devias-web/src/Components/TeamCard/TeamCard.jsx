@@ -6,16 +6,17 @@ import './TeamCard.scss'
 import teamJSON from './teamCard.json'
 
 //Assets
-import mauri from '../../assets/mauri.png'
-import andres from '../../assets/andres.png'
-import vicky from '../../assets/vicky.png'
-import juanca from '../../assets/juanca.png'
-import guly from '../../assets/guly.png'
-import vilma from '../../assets/vilma.png'
-import bruno from '../../assets/bruno.png'
-import rafa from '../../assets/rafa.png'
+import mauri from 'Assets/mauri.png'
+import andres from 'Assets/andres.png'
+import vicky from 'Assets/vicky.png'
+import juanca from 'Assets/juanca.png'
+import guly from 'Assets/guly.png'
+import vilma from 'Assets/vilma.png'
+import bruno from 'Assets/bruno.png'
+import rafa from 'Assets/rafa.png'
 
 export default function TeamCard() {
+
   // Constants
   const images = [
     mauri,
@@ -29,7 +30,7 @@ export default function TeamCard() {
   ]
 
   const team = teamJSON.team
-  
+
   return (
     team.map((profile, index) => (
       <div key={index} className='card'>
@@ -39,10 +40,11 @@ export default function TeamCard() {
         <div className='profile-description'>
           <h4>{profile.name}</h4>
           <h5>{profile.job}</h5>
-          <p className='line'></p>
+          <p className='line' />
           <p> {profile.description} </p>
         </div>
       </div>
     ))
   )
+
 }
