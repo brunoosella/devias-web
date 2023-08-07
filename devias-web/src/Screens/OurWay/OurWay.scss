@@ -129,7 +129,7 @@
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(../../assets/background-design.png);
+            background-image: url(Assets/background-design.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -177,12 +177,15 @@
         }
       }
     }
+    @media (max-width: 991px){
+      margin-bottom: 80px;
+    }
   }
 
   .highlighted-project {
     padding: 115px 0 115px 0;
     color: #FFFFFF !important;
-    background-image: url(../../Assets/background.png);
+    background-image: url(Assets/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -193,8 +196,7 @@
         font-weight: 500;
 
         @media (max-width: 991px) {
-          color: #333;
-          font-size: 2rem;
+          font-size: 2.5rem;
         }
       }
     }
