@@ -19,7 +19,7 @@ export default function ContactUs() {
         <div className='container'>
           <div className='main-title'>
             <h5>
-              - Contact
+              — Contact
             </h5>
             <h1>
               Let's talk.
