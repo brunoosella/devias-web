@@ -28,7 +28,7 @@ export default function Costumer() {
           <div className='container'>
             <div className='main-title'>
               <h5>
-                - Customers
+                — Customers
               </h5>
               <h1>
                 {customer.name}

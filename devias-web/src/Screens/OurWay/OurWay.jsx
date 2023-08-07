@@ -7,6 +7,7 @@ import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import ItemStep from 'Components/ItemStep/ItemStep'
 import Footer from 'Components/Footer/Footer'
+import TechStack from 'Components/TechStack/TechStack'
 
 export default function OurWay() {
 
@@ -73,6 +74,7 @@ export default function OurWay() {
           </div>
         </div>
       </section>
+      <TechStack/>
       {/* Section projects */}
       <section className='highlighted-project'>
         <div className='container'>
