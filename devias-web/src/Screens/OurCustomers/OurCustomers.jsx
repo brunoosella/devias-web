@@ -6,6 +6,7 @@ import './OurCustomers.scss'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
+import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function OurCustomers() {
 
@@ -13,6 +14,10 @@ export default function OurCustomers() {
     <main id='our-customers'>
       {/* Header */}
       <Header />
+
+      {/* WhatsApp Bubble */}
+      <WhatsappBubble />
+
       {/* Title */}
       <section className='section-title'>
         <div className='container'>

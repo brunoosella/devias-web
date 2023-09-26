@@ -7,12 +7,17 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import TechStack from 'Components/TechStack/TechStack'
+import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function Home() {
 
   return (
     <main id='home'>
       <Header />
+
+      {/* WhatsApp Bubble */}
+      <WhatsappBubble />
+
       <section className='PrimarySection'>
         <div className='container'>
           <div className='MainTitle'>

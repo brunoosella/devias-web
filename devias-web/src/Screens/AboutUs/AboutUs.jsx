@@ -6,12 +6,17 @@ import './AboutUs.scss'
 import TeamCard from 'Components/TeamCard/TeamCard'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
+import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function AboutUs() {
 
   return (
     <main id='about-us'>
       <Header />
+
+      {/* WhatsApp Bubble */}
+      <WhatsappBubble />
+
       <section className='section-title'>
         <div className='container'>
           <div className='main-title'>
