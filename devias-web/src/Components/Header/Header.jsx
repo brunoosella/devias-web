@@ -55,13 +55,9 @@ export default function Header() {
               <li>
                 <NavLink to='/our-way'> Our way </NavLink>
               </li>
-              <li>
-                <NavLink to='/contact-us'> Contact us </NavLink>
-              </li>
               <li className='line' />
-
               <li className='container-btn-contact'>
-                <Link id='btn-contact' to='/'> Schedule a meeting </Link>
+                <NavLink id='btn-contact' to='/contact-us'> Contact us </NavLink>
               </li>
             </ul>
           </section>
