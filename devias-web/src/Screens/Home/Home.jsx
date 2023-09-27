@@ -6,6 +6,7 @@ import './Home.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
+import TechStack from 'Components/TechStack/TechStack'
 
 export default function Home() {
 
@@ -66,6 +67,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Tech Stack */}
+      <TechStack />
+
       <section className='HighlightedProject'>
         <div className='container'>
           <h2>
