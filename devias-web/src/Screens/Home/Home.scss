@@ -4,6 +4,7 @@
 
   .PrimarySection{
     color: #333;
+
     .container{
       .MainTitle{
         margin: 100px 0 64px 0;
@@ -20,7 +21,7 @@
         }
       }
       .SectionDescription{
-        margin-bottom: 200px;
+        margin-bottom: 5rem;
         h4{
           font-size: 1.5rem;
           font-weight: 500;
@@ -56,18 +57,21 @@
             background-size: cover;
             background-position: right;
             transition: ease 0.2s;
+
             h2{
               font-size: 3rem;
               color: #FFFFFF;
               font-weight: 500;
               margin-bottom: 48px;
             }
+
             h3{
               font-size: 1.5rem; 
               font-weight: 500;
               margin-bottom: 24px;
               color: #FFFFFF;
             }
+
             @media (max-width: 991px){
               min-height: 300px;
               margin-bottom: 50px;
