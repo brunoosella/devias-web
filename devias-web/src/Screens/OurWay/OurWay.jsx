@@ -8,12 +8,18 @@ import Header from 'Components/Header/Header'
 import ItemStep from 'Components/ItemStep/ItemStep'
 import Footer from 'Components/Footer/Footer'
 import TechStack from 'Components/TechStack/TechStack'
+import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function OurWay() {
 
   return (
     <main id='our-way'>
       <Header />
+
+      {/* WhatsApp Bubble */}
+      <WhatsappBubble />
+
+
       {/* Section title */}
       <section className='primari-section'>
         <div className='container'>

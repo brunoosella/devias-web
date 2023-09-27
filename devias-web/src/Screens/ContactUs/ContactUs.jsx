@@ -5,6 +5,7 @@ import React from 'react'
 import './ContactUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
+import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function ContactUs() {
 
@@ -14,6 +15,10 @@ export default function ContactUs() {
   return (
     <main id='contact-us'>
       <Header />
+
+      {/* WhatsApp Bubble */}
+      <WhatsappBubble />
+
       {/* Section title */}
       <section className='section-title'>
         <div className='container'>
