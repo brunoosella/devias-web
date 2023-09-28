@@ -8,6 +8,7 @@ import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import TechStack from 'Components/TechStack/TechStack'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
+import ContactForm from 'Components/ContactForm/ContactForm'
 
 export default function Home() {
 
@@ -84,6 +85,8 @@ export default function Home() {
           <ProjectDetails />
         </div>
       </section>
+
+      <ContactForm />
       <Footer />
     </main>
   )
