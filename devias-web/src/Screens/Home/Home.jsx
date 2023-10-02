@@ -77,6 +77,9 @@ export default function Home() {
       {/* Tech Stack */}
       <TechStack />
 
+      {/* Contact form */}
+      <ContactForm />
+
       <section className='HighlightedProject'>
         <div className='container'>
           <h2>
@@ -86,7 +89,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ContactForm />
       <Footer />
     </main>
   )
