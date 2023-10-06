@@ -75,10 +75,14 @@
         justify-content: center;
         padding-bottom: 3rem;
         margin: 0 5rem;
-        gap: 1rem;
+        gap: 2rem;
         
         @media (max-width: 991px){
           margin: 0;
+        }
+
+        @media (max-width: 503px) {
+          gap: 1rem;
         }
       }
     }
