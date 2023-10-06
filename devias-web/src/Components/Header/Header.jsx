@@ -1,9 +1,9 @@
 // External Modules
 import React from 'react'
+import {Link, NavLink, useHref} from 'react-router-dom'
 
 // Internal modules
 import './Header.scss'
-import {Link, NavLink} from 'react-router-dom'
 import {RxHamburgerMenu} from 'react-icons/rx'
 
 // Assets
@@ -13,6 +13,26 @@ export default function Header() {
 
   // Local state
   const [isOpen, setIsOpen] = React.useState(false)
+
+  const history = useHref()
+
+  React.useEffect(() => {
+
+    // Remove loader
+    setTimeout(() => {
+
+      const loader = document.getElementById('loader')
+      loader.classList.add('leave')
+      setTimeout(() => {
+
+        loader.remove()
+
+      }, 200)
+      document.body.classList.remove('loading')
+
+    }, 300)
+
+  }, [history])
 
   // Methods
   const handleMenuToggle = () => {
@@ -44,20 +64,41 @@ export default function Header() {
           <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
             <ul>
               <li>
-                <NavLink to='/'> Home </NavLink>
+                <NavLink
+                  className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''}
+                  to='/'
+                > Home
+                </NavLink>
               </li>
               <li>
-                <NavLink to='/our-customers'> Our customers </NavLink>
+                <NavLink
+                  className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-customers'
+                > Our customers
+                </NavLink>
               </li>
               <li>
-                <NavLink to='/about-us'> About us </NavLink>
+                <NavLink
+                  className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/about-us'
+                > About us
+                </NavLink>
               </li>
               <li>
-                <NavLink to='/our-way'> Our way </NavLink>
+                <NavLink
+                  className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-way'
+                > Our way
+                </NavLink>
               </li>
               <li className='line' />
               <li className='container-btn-contact'>
-                <NavLink id='btn-contact' to='/contact-us'> Contact us </NavLink>
+                <NavLink
+                  id='btn-contact' className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/contact-us'
+                > Contact us
+                </NavLink>
               </li>
             </ul>
           </section>

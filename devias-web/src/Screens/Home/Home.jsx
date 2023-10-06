@@ -13,28 +13,29 @@ export default function Home() {
 
   return (
     <main id='home'>
+
       <Header />
 
       {/* WhatsApp Bubble */}
       <WhatsappBubble />
 
-      <section className='PrimarySection'>
+      <section className='primary-section'>
         <div className='container'>
-          <div className='MainTitle'>
+          <div className='main-title'>
             <h1>
               Humanizing
               <br />
               digital products.
             </h1>
           </div>
-          <div className='SectionDescription'>
+          <div className='section-description'>
             <h4>
               We work along our customers to deliver the best solutions.
             </h4>
           </div>
         </div>
       </section>
-      <section className='ServicesCards'>
+      <section className='services-card'>
         <div className='container'>
           <div className='row'>
             <div className='ContainerDevCard'>
@@ -76,7 +77,7 @@ export default function Home() {
       {/* Tech Stack */}
       <TechStack />
 
-      <section className='HighlightedProject'>
+      <section className='highlighted-project'>
         <div className='container'>
           <h2>
             Check out our projects.
