@@ -56,6 +56,12 @@
             background-color: #003c7b17;
             font-family: "Ubuntu", sans-serif;
             text-indent: 13px;
+            transition: transform 0.1s ease;
+
+            &:focus-visible {
+              outline: #598392 solid 2px ;
+              transform: scale(1.01);
+            }
           }
 
           @media (max-width: 503px) {
@@ -82,6 +88,13 @@
           font-family: "Ubuntu", sans-serif;
           margin-bottom: 22px;
           text-indent: 13px;
+          padding: 1em 0.4em;
+          transition: transform 0.1s ease;
+
+          &:focus-visible {
+            outline: #598392 solid 2px ;
+            transform: scale(1.01);
+          }
         }
 
         input {
@@ -90,6 +103,7 @@
           background-color: #598392;
           border: none;
           border-radius: 20px;
+          cursor: pointer;
 
           &:hover {
             opacity: .9;
