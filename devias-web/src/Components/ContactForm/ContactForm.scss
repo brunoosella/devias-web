@@ -108,6 +108,11 @@
           &:hover {
             opacity: .9;
           }
+
+          &.form-empty {
+            cursor: not-allowed;
+            opacity: .8;
+          }
         }
       }
     }

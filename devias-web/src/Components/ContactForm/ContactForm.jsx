@@ -7,22 +7,50 @@ import './ContactForm.scss'
 
 export default function ContactForm (){
 
-  //Constant
+  // Local State
+  const [isLoading, setIsLoading] = React.useState(false)
+
+  const [formData,setFormData] = React.useState({
+    user_name: '',
+    user_last_name: '',
+    user_company: '',
+    user_email: '',
+    consult: ''
+  })
+
+  // Constant
   const form = React.useRef()
+
+  const handleChange = (e) => {
+
+    const {name, value} = e.target
+    setFormData({...formData, [name]: value})
+
+  }
+
+  const formComplet = formData.user_name !== '' &&
+                      formData.user_last_name !== '' &&
+                      formData.user_company !== '' &&
+                      formData.user_email !== '' &&
+                      formData.consult !== ''
 
   // Request of EmailJS
   const sendEmail = (e) => {
 
     e.preventDefault()
+    setIsLoading(true)
 
     emailjs.sendForm('service_f9jpfqc', 'template_d4lzjah', form.current, 'fzV6NkqgeJ4dUbYVN')
       .then((result) => {
 
         console.log(result.text)
+        setIsLoading(false)
+        form.current.reset()
 
       }, (error) => {
 
         console.log(error.text)
+        setIsLoading(false)
 
       })
 
@@ -50,6 +78,8 @@ export default function ContactForm (){
               <input
                 type='text'
                 name='user_name'
+                value={formData.name}
+                onChange={handleChange}
                 placeholder='Name'
                 required
               />
@@ -60,6 +90,8 @@ export default function ContactForm (){
               <input
                 type='text'
                 name='user_last_name'
+                value={formData.lastName}
+                onChange={handleChange}
                 placeholder='Last name'
                 required
               />
@@ -71,6 +103,8 @@ export default function ContactForm (){
               <input
                 type='text'
                 name='user_company'
+                value={formData.company}
+                onChange={handleChange}
                 placeholder='Company'
                 required
               />
@@ -82,6 +116,8 @@ export default function ContactForm (){
               <input
                 type='email'
                 name='user_email'
+                value={formData.email}
+                onChange={handleChange}
                 placeholder='E-mail'
                 required
               />
@@ -94,11 +130,16 @@ export default function ContactForm (){
             <label className='form-label' >Consult <span>*</span></label>
             <textarea
               name='consult'
+              value={formData.consult}
+              onChange={handleChange}
+              placeholder='Leave your consult'
               required
             />
             <input
+              className={`${!formComplet ? 'form-empty' : ''}`}
               type='submit'
-              value='Send'
+              value={isLoading ? 'Sending...' : 'Send'}
+              disabled={isLoading}
             />
           </div>
 
