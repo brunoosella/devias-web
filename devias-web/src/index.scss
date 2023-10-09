@@ -37,6 +37,28 @@ body {
   min-height: 100vh;
 }
 
+  @keyframes scaleUp {
+
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.5);
+    }
+  }
+
+  @keyframes scaleDown {
+
+    from {
+      transform: scale(1.5);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
 h1 {
   font-size: 3.2em;
   line-height: 1.2;

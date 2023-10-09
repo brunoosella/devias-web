@@ -1,6 +1,8 @@
 // External modules
 import React from 'react'
 
+import {createBrowserRouter} from 'react-router-dom'
+
 // Internal modules
 import Home from '../Screens/Home/Home'
 import OurCustomers from '../Screens/OurCustomers/OurCustomers'
@@ -8,39 +10,40 @@ import AboutUs from '../Screens/AboutUs/AboutUs'
 import OurWay from '../Screens/OurWay/OurWay'
 import ContactUs from '../Screens/ContactUs/ContactUs'
 import Customer from '../Screens/OurCustomers/Customer/Customer'
+import ErrorPage from './ErrorPage'
 
-const routes = [
+const router = createBrowserRouter([
   {
     path: '/',
-    component: <Home />,
-    exact: true
+    element: <Home />,
+    errorElement: <ErrorPage />
   },
   {
     path: '/our-customers',
-    component: <OurCustomers />,
-    exact:true
+    element: <OurCustomers />,
+    errorElement:<ErrorPage />
   },
   {
     path: '/about-us',
-    component: <AboutUs />,
-    exact:true
+    element: <AboutUs />,
+    errorElement:<ErrorPage />
   },
   {
     path: '/our-way',
-    component: <OurWay />,
-    exact:true
+    element: <OurWay />,
+    errorElement:<ErrorPage />
   },
   {
     path: '/contact-us',
-    component: <ContactUs />,
-    exact:true
+    element: <ContactUs />,
+    errorElement:<ErrorPage />
   },
   {
     path: '/customer/:client',
-    component: <Customer />,
-    exact:true
+    element: <Customer />,
+    errorElement:<ErrorPage />
   }
-  
-]
 
-export default routes
+])
+
+export default router
