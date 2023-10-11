@@ -18,6 +18,7 @@ export default function ContactForm (){
     consult: ''
   })
 
+  // Status to check touched
   const [touchedFields, setTouchedFields] = React.useState({
     user_name: false,
     user_last_name: false,
@@ -26,9 +27,13 @@ export default function ContactForm (){
     consult: false
   })
 
-  // Constant
+  // Used to initialize the variable to false
+  const [allFieldsValid, setAllFieldsValid] = React.useState(false)
+
+  // Constants
   const form = React.useRef()
 
+  // Save the new values
   const handleChange = (e) => {
 
     const {name, value} = e.target
@@ -36,12 +41,7 @@ export default function ContactForm (){
 
   }
 
-  const formComplet = formData.user_name !== '' &&
-                      formData.user_last_name !== '' &&
-                      formData.user_company !== '' &&
-                      formData.user_email !== '' &&
-                      formData.consult !== ''
-
+  // Checkd touched
   const handleBlur = (e) => {
 
     const {name} = e.target
@@ -49,9 +49,14 @@ export default function ContactForm (){
 
   }
 
+  // Verify is field valid
   const isFieldValid = (fieldName) => {
 
-    if (touchedFields[fieldName]) {
+    if (!touchedFields[fieldName]) {
+
+      return false
+
+    } else {
 
       switch (fieldName) {
 
@@ -76,11 +81,18 @@ export default function ContactForm (){
       }
 
     }
-    return true
 
   }
 
-  const allFieldsValid = Object.keys(formData).every((fieldName) => isFieldValid(fieldName))
+  // Effects
+
+  // Verify is all fields valid
+  React.useEffect(() => {
+
+    const newAllFieldsValid = Object.keys(formData).every((fieldName) => isFieldValid(fieldName))
+    setAllFieldsValid(newAllFieldsValid)
+
+  }, [formData, touchedFields])
 
   // Request of EmailJS
   const sendEmail = (e) => {
@@ -94,6 +106,11 @@ export default function ContactForm (){
         console.log(result.text)
         setIsLoading(false)
         form.current.reset()
+        setAllFieldsValid(false)
+        setFormData({
+          ...formData,
+          consult: ''
+        })
 
       }, (error) => {
 
@@ -132,6 +149,7 @@ export default function ContactForm (){
                 placeholder='Name'
               />
 
+              {/* Verify touched name and valid name */}
               {touchedFields.user_name && !isFieldValid('user_name') && (
                 <h4 className='input-incorrect'>Short name</h4>
               )}
@@ -148,7 +166,8 @@ export default function ContactForm (){
                 placeholder='Last name'
               />
 
-              {touchedFields.user_name && !isFieldValid('user_last_name') && (
+              {/* Verify touched last name and valid last name */}
+              {touchedFields.user_last_name && !isFieldValid('user_last_name') && (
                 <h4 className='input-incorrect'>Short last name</h4>
               )}
             </div>
@@ -165,7 +184,8 @@ export default function ContactForm (){
                 placeholder='Company'
               />
 
-              {touchedFields.user_name && !isFieldValid('user_company') && (
+              {/* Verify touched company and valid company */}
+              {touchedFields.user_company && !isFieldValid('user_company') && (
                 <h4 className='input-incorrect'>Short name company</h4>
               )}
             </div>
@@ -182,7 +202,8 @@ export default function ContactForm (){
                 placeholder='E-mail'
               />
 
-              {touchedFields.user_name && !isFieldValid('user_email') && (
+              {/* Verify touched email and valid email */}
+              {touchedFields.user_email && !isFieldValid('user_email') && (
                 <h4 className='input-incorrect'>Incorrect email</h4>
               )}
             </div>
@@ -200,11 +221,12 @@ export default function ContactForm (){
               placeholder='Leave your consult'
             />
 
-            {touchedFields.user_name && !isFieldValid('consult') && (
+            {/* Verify touched consult and valid consult */}
+            {touchedFields.consult && !isFieldValid('consult') && (
               <h4 className='input-incorrect-consult'>The minimum number of characters is (15)</h4>
             )}
             <input
-              className={`${!formComplet ? 'form-empty' : ''}`}
+              className={`${!allFieldsValid ? 'form-empty' : ''}`}
               type='submit'
               value={isLoading ? 'Sending...' : 'Send'}
               disabled={!allFieldsValid}
