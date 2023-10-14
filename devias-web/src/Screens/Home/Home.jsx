@@ -9,8 +9,6 @@ import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import TechStack from 'Components/TechStack/TechStack'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import {AppContext} from '../../AppContext'
-
-// Languages
 import ContactForm from 'Components/ContactForm/ContactForm'
 
 export default function Home() {
@@ -93,9 +91,6 @@ export default function Home() {
       {/* Tech Stack */}
       <TechStack />
 
-      {/* Contact form */}
-      <ContactForm />
-
       <section className='highlighted-project'>
         <div className='container'>
           <h2>
@@ -104,6 +99,9 @@ export default function Home() {
           <ProjectDetails />
         </div>
       </section>
+
+      {/* Contact form */}
+      <ContactForm />
 
       <Footer />
     </main>
