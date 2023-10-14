@@ -63,6 +63,14 @@
             }
           }
 
+          .input-incorrect {
+            position: relative;
+            top: 7px;
+            left: 8px;
+            color: red;
+            font-size: 11px;
+          }
+
           @media (max-width: 503px) {
             width: 85%;
           }
@@ -95,6 +103,16 @@
             transform: scale(1.01);
           }
         }
+
+        .input-incorrect-consult {
+            position: relative;
+            bottom: 16px;
+            left: 7px;
+            z-index: 99;
+            color: red;
+            font-size: 11px;
+          }
+
 
         input {
           height: 35px;
