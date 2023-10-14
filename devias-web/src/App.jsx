@@ -4,8 +4,13 @@ import {RouterProvider} from 'react-router-dom'
 
 // Router
 import router from './Router/routes'
+import {AppProvider} from './AppContext'
+import {reducer} from './AppReducer'
 
 export default function App() {
+
+  // Declare reducer
+  const [state, dispatch] = React.useReducer(...reducer)
 
   // Local state
   const [loading, setLoading] = React.useState(true)
@@ -26,7 +31,9 @@ export default function App() {
   return (
 
     !loading &&
+    <AppProvider value={{state, dispatch}}>
       <RouterProvider router={router} />
+    </AppProvider>
 
   )
 
