@@ -4,11 +4,25 @@ import React from 'react'
 // Internal modules
 import './Footer.scss'
 import {Link, NavLink} from 'react-router-dom'
+import {AppContext} from '../../AppContext'
 
 // Assets
 import logo from 'Assets/logo.png'
 
 export default function Footer() {
+
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const [language, setLanguage] = React.useState(state.language_content.footer.links)
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.footer.links)
+
+  }, [state.language])
 
   return (
     <footer>
@@ -30,13 +44,13 @@ export default function Footer() {
         <div className='container-footer-links'>
           <ul>
             <li>
-              <NavLink to='/our-customers'> Our customers </NavLink>
+              <NavLink to='/our-customers'> {language.customers} </NavLink>
             </li>
             <li>
-              <NavLink to='/about-us'> About us </NavLink>
+              <NavLink to='/about-us'> {language.about_us} </NavLink>
             </li>
             <li>
-              <NavLink to='/our-way'> Our way </NavLink>
+              <NavLink to='/our-way'> {language.our_way} </NavLink>
             </li>
             {/* <li>
               <NavLink to='/careers'> Careers </NavLink>

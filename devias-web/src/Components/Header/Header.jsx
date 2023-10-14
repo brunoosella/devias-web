@@ -5,16 +5,53 @@ import {Link, NavLink, useHref} from 'react-router-dom'
 // Internal modules
 import './Header.scss'
 import {RxHamburgerMenu} from 'react-icons/rx'
+import en from '../../Helpers/english.json'
+import es from '../../Helpers/spanish.json'
 
 // Assets
 import logo from 'Assets/logo.png'
+import {AppContext} from '../../AppContext'
 
 export default function Header() {
 
+  // Global State
+  const {state, dispatch} = React.useContext(AppContext)
+
   // Local state
   const [isOpen, setIsOpen] = React.useState(false)
+  const [language, setLanguage] = React.useState(state.language_content.header.links)
 
+  // Constants
   const history = useHref()
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.header.links)
+
+  }, [state.language])
+
+  // Effects
+
+  React.useEffect(() => {
+
+    if(state.language === 'en') {
+
+      dispatch({
+        type: 'UPDATE_CONTENT_LANGUAGE',
+        data: en
+      })
+
+    } else if (state.language === 'es') {
+
+      dispatch({
+        type: 'UPDATE_CONTENT_LANGUAGE',
+        data: es
+      })
+
+    }
+
+  },[])
 
   React.useEffect(() => {
 
@@ -38,6 +75,36 @@ export default function Header() {
   const handleMenuToggle = () => {
 
     setIsOpen(!isOpen)
+
+  }
+
+  const selectLanguage = (lan) => {
+
+    if (lan === 'en') {
+
+      dispatch({
+        type: 'UPDATE_LANGUAGE',
+        data: 'en'
+      })
+
+      dispatch({
+        type: 'UPDATE_CONTENT_LANGUAGE',
+        data: en
+      })
+
+    } else {
+
+      dispatch({
+        type: 'UPDATE_LANGUAGE',
+        data: 'es'
+      })
+
+      dispatch({
+        type: 'UPDATE_CONTENT_LANGUAGE',
+        data: es
+      })
+
+    }
 
   }
 
@@ -68,28 +135,28 @@ export default function Header() {
                   className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''}
                   to='/'
-                > Home
+                > {language.home}
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} to='/our-customers'
-                > Our customers
+                > {language.customers}
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} to='/about-us'
-                > About us
+                > {language.about_us}
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} to='/our-way'
-                > Our way
+                > {language.our_way}
                 </NavLink>
               </li>
               <li className='line' />
@@ -97,12 +164,23 @@ export default function Header() {
                 <NavLink
                   id='btn-contact' className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} to='/contact-us'
-                > Contact us
+                > {language.contact}
                 </NavLink>
               </li>
             </ul>
           </section>
 
+          {/* Language Toggle */}
+
+          <section className='language-toggle'>
+            <button className={`${state.language === 'en' ? 'active' : ''}`} onClick={() => selectLanguage('en')}>
+              EN
+            </button>
+            |
+            <button className={`${state.language === 'es' ? 'active' : ''}`} onClick={() => selectLanguage('es')}>
+              ES
+            </button>
+          </section>
         </div>
       </nav>
     </header>

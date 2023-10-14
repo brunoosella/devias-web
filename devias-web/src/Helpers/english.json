@@ -1,0 +1,43 @@
+{
+  "header": {
+    "links":{
+      "home": "Home",
+      "customers": "Our Customers",
+      "about_us":"About Us",
+      "our_way":"Our Way",
+      "contact": "Contact Us"
+    }
+  },
+  "home" : {
+    "main_title": {
+      "title": "Humanizing\ndigital products.",
+      "legend": "We work along our customers to deliver the best solutions."
+    },
+    "services": {
+      "development": {
+        "title": "Development",
+        "service_1": "Back-End Development",
+        "service_2": "Front-end Development",
+        "service_3": "IOS / Android Development"
+      },
+      "design": {
+        "title": "Design",
+        "service_1": "UX Design",
+        "service_2": "UI Design",
+        "service_3": "Wireframes"
+      }
+    },
+    "technologies": {},
+    "projects_section": {
+      "title": "Check out our projects",
+      "projects": {}
+    }
+  },
+  "footer": {
+    "links": {
+      "customers": "Our Customers",
+      "about_us": "About Us",
+      "our_way": "Our Way"
+    }
+  }
+}

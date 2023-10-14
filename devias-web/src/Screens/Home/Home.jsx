@@ -8,8 +8,24 @@ import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import TechStack from 'Components/TechStack/TechStack'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
+import {AppContext} from '../../AppContext'
+
+// Languages
 
 export default function Home() {
+
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const [language, setLanguage] = React.useState(state.language_content.home)
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.home)
+
+  }, [state.language])
 
   return (
     <main id='home'>
@@ -23,50 +39,49 @@ export default function Home() {
         <div className='container'>
           <div className='main-title'>
             <h1>
-              Humanizing
-              <br />
-              digital products.
+              {language.main_title.title}
             </h1>
           </div>
           <div className='section-description'>
             <h4>
-              We work along our customers to deliver the best solutions.
+              {language.main_title.legend}
             </h4>
           </div>
         </div>
       </section>
+
       <section className='services-card'>
         <div className='container'>
           <div className='row'>
             <div className='ContainerDevCard'>
               <div className='DevCard'>
                 <h2>
-                  Development.
+                  {language.services.development.title}
                 </h2>
                 <h3>
-                  Back-End Development
+                  {language.services.development.service_1}
                 </h3>
                 <h3>
-                  Front-End Development
+                  {language.services.development.service_2}
                 </h3>
                 <h3>
-                  iOS / Android Development
+                  {language.services.development.service_3}
                 </h3>
               </div>
             </div>
             <div className='ContainerDesignCard'>
               <div className='DesignCard'>
                 <h2>
-                  Design
+                  {language.services.design.title}
                 </h2>
                 <h3>
-                  UX Design
+                  {language.services.design.service_1}
                 </h3>
                 <h3>
-                  UI Design
+                  {language.services.design.service_2}
                 </h3>
                 <h3>
-                  Wireframes
+                  {language.services.design.service_3}
                 </h3>
               </div>
             </div>
@@ -80,7 +95,7 @@ export default function Home() {
       <section className='highlighted-project'>
         <div className='container'>
           <h2>
-            Check out our projects.
+            {language.projects_section.title}
           </h2>
           <ProjectDetails />
         </div>

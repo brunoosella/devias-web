@@ -1,0 +1,43 @@
+{
+  "header": {
+    "links": {
+      "home": "Inicio",
+      "customers": "Nuestros Clientes",
+      "about_us": "Nosotros",
+      "our_way": "Cómo trabajamos",
+      "contact": "Contáctanos"
+    }
+  },
+  "home": {
+    "main_title": {
+      "title": "Humanizando\nproductos digitales",
+      "legend": "Trabajamos junto a nuestros clientes para ofrecer las mejores soluciones."
+    },
+    "services": {
+      "development": {
+        "title": "Desarrollo",
+        "service_1": "Desarrollo Back-End",
+        "service_2": "Desarrollo Front-end",
+        "service_3": "Desarrollo para IOS / Android"
+      },
+      "design": {
+        "title": "Diseño",
+        "service_1": "Diseño UX",
+        "service_2": "Diseño UI",
+        "service_3": "Wireframes"
+      }
+    },
+    "technologies": {},
+    "projects_section": {
+      "title": "Echa un vistazo a nuestros projectos",
+      "projects": {}
+    }
+  },
+  "footer": {
+    "links":{
+      "customers": "Nuestros Clientes",
+      "about_us": "Nosotros",
+      "our_way": "Cómo trabajamos"
+    }
+  }
+}

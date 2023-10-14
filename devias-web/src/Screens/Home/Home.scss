@@ -10,6 +10,9 @@
       .main-title{
         margin: 100px 0 64px 0;
         animation: slideRight 0.5s ease-in-out;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
 
         h1{
           font-size: 6rem;
