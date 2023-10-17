@@ -32,27 +32,7 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-      {/* Section calendly */}
-      <section className='calendly'>
-        <div className='container'>
-          <p>
-            Choose a date and time for our meeting.
-          </p>
-          <p>
-            We will contact you to arrange the details.
-          </p>
-          {/* Insert calendly */}
-          <div className='calendly-container'>
-            <iframe
-              title='Calendly'
-              src={calendlyLink}
-              width='100%'
-              height='600'
-              frameBorder='0'
-            />
-          </div>
-        </div>
-      </section>
+      
       <Footer />
     </main>
   )
