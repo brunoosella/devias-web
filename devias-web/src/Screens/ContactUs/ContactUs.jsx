@@ -5,6 +5,7 @@ import React from 'react'
 import './ContactUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
+import ContactForm from 'Components/ContactForm/ContactForm'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function ContactUs() {
@@ -32,6 +33,9 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
+
+      {/* Contact form */}
+      <ContactForm />
       
       <Footer />
     </main>
