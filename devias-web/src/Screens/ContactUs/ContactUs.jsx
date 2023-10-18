@@ -8,14 +8,14 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
-import MyMapComponent from '../../Components/Map/MyMapComponent'
+import MyMapComponent from 'Components/Map/MyMapComponent'
 
 export default function ContactUs() {
 
   // Constants
   const API_KEY = 'AIzaSyA7u1yNadkGlTvSssNK6UbIIC9L0FumQto'
-  const center = {lat: -33.118228960761876, lng: -64.36557908465618}
-  const zoom = 4
+  const center = {lat: -33.118228960761876, lng: -64.36557908465618} 
+  const zoom = 16
 
   // Methods
 
@@ -58,8 +58,13 @@ export default function ContactUs() {
       {/* Contact form */}
       <ContactForm />
 
-      {/* Google maps */}
-      <Wrapper apiKey={API_KEY} render={render} />
+      <section className='section-map'>
+
+        <h3> Visit us </h3>
+
+        {/* Google maps */}
+        <Wrapper apiKey={API_KEY} render={render} />
+      </section>
       
       <Footer />
     </main>
