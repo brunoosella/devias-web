@@ -13,7 +13,6 @@ import MyMapComponent from '../../Components/Map/MyMapComponent'
 export default function ContactUs() {
 
   // Constants
-  const calendlyLink = 'https://calendly.com/nicovillegas650/30min'
   const API_KEY = 'AIzaSyA7u1yNadkGlTvSssNK6UbIIC9L0FumQto'
   const center = {lat: -33.118228960761876, lng: -64.36557908465618}
   const zoom = 4
@@ -42,8 +41,6 @@ export default function ContactUs() {
       {/* WhatsApp Bubble */}
       <WhatsappBubble />
 
-      <Wrapper apiKey={API_KEY} render={render} />
-
       {/* Section title */}
       <section className='section-title'>
         <div className='container'>
@@ -60,6 +57,9 @@ export default function ContactUs() {
 
       {/* Contact form */}
       <ContactForm />
+
+      {/* Google maps */}
+      <Wrapper apiKey={API_KEY} render={render} />
       
       <Footer />
     </main>
