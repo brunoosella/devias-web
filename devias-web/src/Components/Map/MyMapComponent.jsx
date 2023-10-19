@@ -6,7 +6,7 @@ import './MyMapComponent.scss'
 
 export default function MyMapComponent({center, zoom}) {
 
-  const marketDevias = { lat: -33.119089353100854, lng: -64.3656716210941 }
+  const marketDevias = {lat: -33.119089353100854, lng: -64.3656716210941}
 
   const ref = React.useRef()
 
@@ -17,7 +17,7 @@ export default function MyMapComponent({center, zoom}) {
       zoom
     })
 
-    const marker = new google.maps.Marker({
+    new window.google.maps.Marker({
       position: marketDevias,
       map,
       title: 'Devias'
@@ -26,11 +26,11 @@ export default function MyMapComponent({center, zoom}) {
   })
 
   return (
-    <div className='container'>
 
-      <div id='map-container'>
-        <div ref={ref} id='map' />
-      </div>
-    </div> 
+    <div id='map-container'>
+      <div ref={ref} id='map' />
+    </div>
+
   )
+
 }

@@ -32,7 +32,6 @@ export default function Header() {
   }, [state.language])
 
   // Effects
-
   React.useEffect(() => {
 
     if(state.language === 'en') {
@@ -59,10 +58,10 @@ export default function Header() {
     setTimeout(() => {
 
       const loader = document.getElementById('loader')
-      loader.classList.add('leave')
+      loader?.classList.add('leave')
       setTimeout(() => {
 
-        loader.remove()
+        loader?.remove()
 
       }, 200)
       document.body.classList.remove('loading')

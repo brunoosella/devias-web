@@ -14,7 +14,7 @@ export default function ContactUs() {
 
   // Constants
   const API_KEY = 'AIzaSyA7u1yNadkGlTvSssNK6UbIIC9L0FumQto'
-  const center = {lat: -33.118228960761876, lng: -64.36557908465618} 
+  const center = {lat: -33.118228960761876, lng: -64.36557908465618}
   const zoom = 16
 
   // Methods
@@ -49,23 +49,22 @@ export default function ContactUs() {
               — Contact
             </h5>
             <h1>
-              Let's talk.
+              Know us.
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Contact form */}
-      <ContactForm />
+      <section id='form-map-section'>
 
-      <section className='section-map'>
-
-        <h3> Visit us </h3>
+        {/* Contact form */}
+        <ContactForm />
 
         {/* Google maps */}
         <Wrapper apiKey={API_KEY} render={render} />
+
       </section>
-      
+
       <Footer />
     </main>
   )
