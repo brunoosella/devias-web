@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import './WhatsappBubble.scss'
 
 // Assets
-import logoWhatsapp from 'Assets/WhatsApp.png'
+import logoWhatsapp from 'Assets/Utilities/logo-whatsapp.png'
 
 export default function WhatsappBubble () {
   return (

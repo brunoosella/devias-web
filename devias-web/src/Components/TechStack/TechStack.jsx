@@ -5,9 +5,9 @@ import React from 'react'
 import './TechStack.scss'
 
 // Assets
-import logoReact from 'Assets/logo-react.png'
-import logoRails from 'Assets/logo-rails.png'
-import logoFigma from 'Assets/logo-figma.png'
+import logoReact from 'Assets/TechStack/logo-react.png'
+import logoRails from 'Assets/TechStack/logo-rails.png'
+import logoFigma from 'Assets/TechStack/logo-figma.png'
 
 export default function TechStack() {
   // Constant
