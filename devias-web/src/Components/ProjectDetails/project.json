@@ -32,6 +32,17 @@
       "long-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
       "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/react.png",
       "tech-name": "React"
+    },
+    {
+      "code": "bucked-up",
+      "name": "Bucked Up",
+      "img": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-thumb.png",
+      "img-logo": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-logo.png",
+      "img-page": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-preview-1024x588.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
+      "long-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
+      "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/react.png",
+      "tech-name": "React"
     }
   ]
 }
