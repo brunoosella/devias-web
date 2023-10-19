@@ -1,16 +1,38 @@
 // External modules
 import React from 'react'
+import {Wrapper, Status} from '@googlemaps/react-wrapper'
 
 // Internal modules
 import './ContactUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
+import ContactForm from 'Components/ContactForm/ContactForm'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
+import MyMapComponent from 'Components/Map/MyMapComponent'
 
 export default function ContactUs() {
 
   // Constants
-  const calendlyLink = 'https://calendly.com/nicovillegas650/30min'
+  const API_KEY = 'AIzaSyA7u1yNadkGlTvSssNK6UbIIC9L0FumQto'
+  const center = {lat: -33.118228960761876, lng: -64.36557908465618}
+  const zoom = 16
+
+  // Methods
+
+  const render = (status) => {
+
+    switch (status) {
+
+      case Status.LOADING:
+        return null
+      case Status.FAILURE:
+        return null
+      case Status.SUCCESS:
+        return <MyMapComponent center={center} zoom={zoom} />
+
+    }
+
+  }
 
   return (
     <main id='contact-us'>
@@ -27,32 +49,22 @@ export default function ContactUs() {
               — Contact
             </h5>
             <h1>
-              Let's talk.
+              Know us.
             </h1>
           </div>
         </div>
       </section>
-      {/* Section calendly */}
-      <section className='calendly'>
-        <div className='container'>
-          <p>
-            Choose a date and time for our meeting.
-          </p>
-          <p>
-            We will contact you to arrange the details.
-          </p>
-          {/* Insert calendly */}
-          <div className='calendly-container'>
-            <iframe
-              title='Calendly'
-              src={calendlyLink}
-              width='100%'
-              height='600'
-              frameBorder='0'
-            />
-          </div>
-        </div>
+
+      <section id='form-map-section'>
+
+        {/* Contact form */}
+        <ContactForm />
+
+        {/* Google maps */}
+        <Wrapper apiKey={API_KEY} render={render} />
+
       </section>
+
       <Footer />
     </main>
   )
