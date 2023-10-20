@@ -7,10 +7,10 @@
       "img": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-thumb.png",
       "img-logo": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-logo.png",
       "img-page": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-preview-1024x588.png",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
-      "long-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
+      "description": "Plataforma ecommerce para venta de productos fitness, aplicación móvil para embajadores de marca, disponible para android y iOS y plataforma Bootcamp para clientes.",
+      "long-description": "Plataforma de Ventas para Laboratorio\n Nuestro cliente requería una plataforma de ventas para comercializar los productos de su laboratorio de manera eficiente. A través de nuestra solución de software, logramos proporcionar al cliente una plataforma de comercio electrónico (eCommerce) desarrollada en React. Esta plataforma le permite gestionar las ventas, facturación y envíos de manera efectiva, además de servir a diferentes tipos de clientes. Debido a su alto volumen de ventas y la necesidad de tomar decisiones constantes, ofrecemos mantenimiento y actualizaciones periódicas para asegurar un funcionamiento óptimo.\n Aplicación Móvil para Ambassadors\n El cliente necesitaba una aplicación móvil para sus embajadores de marca, que incluyen revendedores, entrenadores y sponsors. Estos embajadores comercializan los productos de la marca y nuestra solución consistió en desarrollar una aplicación móvil en React Native. A través de esta aplicación, mejoramos la experiencia de los embajadores al proporcionarles una plataforma de gestión de contenido, facturación, ventas, historial y entrenamiento. La aplicación funciona en dispositivos iOS y Android, brindando flexibilidad a los embajadores para acceder a herramientas clave en sus dispositivos preferidos.\n Plataforma de Entrenamiento (Bootcamp)\n El cliente requería una plataforma de entrenamiento que se activara periódicamente en forma de bootcamps. Cada ciertos meses, se lleva a cabo un bootcamp de entrenamiento que incluye una plataforma con una aplicación de seguimiento exclusiva para dietas, ejercicios y objetivos físicos a corto plazo. Los usuarios ingresan su información nutricional y corporal, realizan tareas, ejercicios y rutinas diarias durante el bootcamp, y registran sus resultados. Nuestra solución maneja toda la carga de información y el seguimiento de los inscritos, lo que incluye el envío y recepción de datos, así como la visualización de la evolución y los resultados a través de gráficos.\n Estos tres proyectos son ejemplos de cómo nuestra empresa de desarrollo de software crea soluciones personalizadas para satisfacer las necesidades específicas de nuestros clientes, mejorando sus operaciones y la experiencia de sus usuarios.",
       "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/react.png",
-      "tech-name": "React"
+      "tech-name": "React-React Native"
     },
     {
         "code": "reef-check",
@@ -23,26 +23,46 @@
         "tech-name": "Rails"    
     },
     {
-      "code": "bucked-up",
-      "name": "Bucked Up",
+      "code": "mi-osfatun",
+      "name": "Mi Osfatun",
       "img": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-thumb.png",
       "img-logo": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-logo.png",
       "img-page": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-preview-1024x588.png",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
-      "long-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
+      "description": "Aplicación móvil para afiliados de mutual médica destinada a realizar distintos trámites, disponible para android y iOS.",
+      "long-description": "En respuesta a las necesidades de nuestros clientes, hemos desarrollado una aplicación móvil de gestión de afiliados que ofrece comodidad y accesibilidad. Esta aplicación, creada en React Native, permite a los afiliados realizar una variedad de trámites y consultas de forma sencilla, con solo ingresar su número de documento de identidad. Entre las funcionalidades clave se incluyen la solicitud de autorizaciones, la consulta de la cartilla médica y la obtención de información sobre delegaciones y números de teléfono de emergencia.\n El impacto de esta aplicación ha sido significativo, mejorando la experiencia de los afiliados y reduciendo la carga administrativa. Recientemente, hemos realizado un rediseño para ofrecer una experiencia aún más intuitiva y atractiva, y hemos desarrollado una versión compatible con dispositivos iOS. Estas mejoras reflejan nuestro compromiso con la excelencia y la satisfacción del usuario. Estamos orgullosos de haber contribuido a este proyecto innovador que continúa evolucionando para brindar un servicio de calidad a los afiliados.",
+      "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/react.png",
+      "tech-name": "React Native"
+    },
+    {
+      "code": "portal-ODS",
+      "name": "Portal ODS",
+      "img": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-thumb.png",
+      "img-logo": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-logo.png",
+      "img-page": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-preview-1024x588.png",
+      "description": "Plataforma web diseñada para demostrar el compromiso de un gobierno con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas.",
+      "long-description": "GovSDS es una plataforma web diseñada para demostrar el compromiso de un gobierno con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas. Esta herramienta innovadora no solo proporciona una visualización clara de cómo el gobierno se alinea con los ODS, sino que también tiene la capacidad de interconectarse con una variedad de sistemas gubernamentales y realizar análisis de datos para respaldar la toma de decisiones informadas.\n El objetivo principal del proyecto GovSDS fue desarrollar una plataforma web innovadora y altamente funcional que permitiera a los gobiernos demostrar su compromiso con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas. Esta plataforma no solo busca visualizar claramente la alineación de políticas y proyectos gubernamentales con los ODS, sino también habilitar la interconexión con sistemas gubernamentales existentes, realizar análisis de datos avanzados y presentar información de manera interactiva para respaldar la toma de decisiones informadas.\n El cliente enfrentaba varios desafíos, entre ellos la falta de transparencia en la demostración del compromiso del gobierno con los ODS, la dificultad en la recopilación de datos de múltiples sistemas gubernamentales y la necesidad de comunicarse efectivamente con ciudadanos y partes interesadas.\n Para abordar estos desafíos, se implementó GovSDS con estrategias clave que incluyen el desarrollo en React, la integración de web services, el análisis de datos avanzados y una interfaz de usuario diseñada para una comunicación efectiva.\n GovSDS ha promovido la transparencia y la rendición de cuentas al permitir al gobierno demostrar su compromiso con los ODS. Los análisis de datos avanzados han respaldado la toma de decisiones informadas sobre la implementación de políticas relacionadas con los ODS. La plataforma ha identificado áreas de mejora, lo que ha permitido una asignación más eficiente de recursos para lograr los ODS. GovSDS ha facilitado la comunicación con ciudadanos y partes interesadas al proporcionar una visión clara del progreso hacia los ODS.",
       "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/react.png",
       "tech-name": "React"
     },
     {
-      "code": "bucked-up",
-      "name": "Bucked Up",
-      "img": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-thumb.png",
-      "img-logo": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-logo.png",
-      "img-page": "https://devias.ar/dev/wp-content/uploads/2022/01/bucked-preview-1024x588.png",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
-      "long-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
-      "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/react.png",
-      "tech-name": "React"
-    }
+      "code": "reef-check",
+      "name": "Reef Check",
+      "img": "https://devias.ar/dev/wp-content/uploads/2022/02/reef-check-1.png",
+      "img-logo": "",
+      "description": "Plataforma de Votación y Escrutinio de Presupuesto Participativo Ciudadano",
+      "long-description": "Nuestro proyecto, conocido como PP, tenía como objetivo principal facilitar el proceso de presupuesto participativo ciudadano, empoderando a los residentes de una comunidad para tomar decisiones clave sobre la asignación de fondos públicos. Esta plataforma web fue desarrollada con un enfoque en la transparencia, la participación cívica y la toma de decisiones colaborativa.\n El cliente se enfrentaba al desafío de involucrar efectivamente a los ciudadanos en el proceso de presupuesto participativo, garantizando la equidad y la transparencia en la toma de decisiones. La comunicación y el seguimiento de propuestas y votos eran áreas problemáticas que requerían soluciones.\nPara abordar estos desafíos, desarrollamos PP utilizando Ruby on Rails y web services para integrarnos con los sistemas de gestión existentes. Creamos una interfaz de usuario intuitiva que permitía a los residentes registrarse fácilmente, presentar propuestas de proyectos y emitir votos en línea. Además, fomentamos la comunicación y el debate entre los ciudadanos a través de la plataforma.",
+      "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/rails.png",
+      "tech-name": "Ruby on Rails"    
+  },
+  {
+    "code": "mitext",
+    "name": "Mi Text",
+    "img": "https://devias.ar/dev/wp-content/uploads/2022/02/reef-check-1.png",
+    "img-logo": "",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam necessitatibus ducimus eum nulla saepe sapiente soluta iusto laborum maiores sit quasi odio quis, officiis nemo unde ad temporibus? Minima.",
+    "long-description": "La plataforma web Mi text es una herramienta esencial para cualquier organización que busca establecer una comunicación efectiva y directa con su audiencia a través de mensajes de texto SMS. Diseñada con un enfoque en la facilidad de uso y la versatilidad, esta plataforma permite a los usuarios planificar, crear y ejecutar campañas de SMS de manera eficiente y personalizada.\n El objetivo principal de mitext es proporcionar a las organizaciones una plataforma que les permita planificar, crear y ejecutar campañas de SMS de manera eficiente y personalizada.\n El cliente se enfrentaba al desafío de mejorar su comunicación con clientes, empleados y otros miembros de su comunidad, y al mismo tiempo, optimizar el uso de sus recursos. La necesidad de personalización y automatización en las campañas de SMS era evidente.\n Nuestro enfoque clave fue desarrollar una plataforma de fácil uso y alta eficiencia. Utilizamos tecnologías de vanguardia como Ruby on Rails en el backend y React en el frontend, y establecimos conexiones con proveedores de telefonía mediante web services para garantizar la entrega confiable de mensajes.\n La implementación exitosa de mitext ha resultado en una comunicación directa y efectiva para el cliente con sus diversas audiencias. Los mensajes de texto tienen tasas de apertura significativamente más altas, lo que ha aumentado la participación y la eficiencia en la comunicación. La automatización y las plantillas han ahorrado tiempo y recursos, y la personalización ha mejorado la relación con los destinatarios.",
+    "tech-img": "https://devias.ar/dev/wp-content/uploads/2022/01/rails.png",
+    "tech-name": "Ruby on Rails-React"    
+}
   ]
 }
