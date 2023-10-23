@@ -59,10 +59,10 @@
         margin-right: calc(-.5 * var(--bs-gutter-x));
         margin-left: calc(-.5 * var(--bs-gutter-x));
 
-        .ContainerDevCard{
+        .container-dev-card{
           width: 50%;
           padding: 0 1rem;
-          .DevCard{
+          .dev-card{
             background-color: #598392;
             padding: 48px;
             border-radius: 10px;
@@ -107,11 +107,11 @@
           }
         }
 
-        .ContainerDesignCard{
+        .container-design-card{
           width: 50%;
           padding: 0 1rem;
 
-          .DesignCard{
+          .design-card{
             background-color: #EBC95C;
             color: #333;
             padding: 48px;
