@@ -7,7 +7,7 @@ import {Link, NavLink} from 'react-router-dom'
 import {AppContext} from '../../AppContext'
 
 // Assets
-import logo from 'Assets/Utilities/logo-devias.png'
+import logoDevias from 'Assets/Utilities/logo-devias.png'
 
 export default function Footer() {
 
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
         <div className='container-footer-logo'>
           <Link to='/'>
-            <img src={logo} alt='dev-logo' />
+            <img src={logoDevias} alt='dev-logo' />
           </Link>
         </div>
       </section>

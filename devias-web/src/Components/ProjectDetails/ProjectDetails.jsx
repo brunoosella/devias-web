@@ -6,6 +6,7 @@ import {useParams} from 'react-router'
 // Internal modules
 import './ProjectDetails.scss'
 import json from './project.json'
+import Card from './Card/Card'
 
 export default function ProjectDetails({customerView}) {
 
@@ -40,14 +41,14 @@ export default function ProjectDetails({customerView}) {
       <div key={index} className='project-detail'>
         {/* Link image */}
         <div className='project-thumbnail'>
-          <Link to={project.link}>
-            <img src={project.img} alt={project.name} />
+          <Link to={`/customer/${project.code}`}>
+            <Card img={project.img} alt={project.name}/>
           </Link>
         </div>
         {/* Contain Info */}
         <div className='contain-info'>
           <div className='project-title'>
-            <Link to={project.link}>
+            <Link to={`/customer/${project.code}`}>
               {project.name}
             </Link>
           </div>
