@@ -45,9 +45,6 @@ export default function Costumer() {
               </div>
               <p>
                 {customer['long-description']}
-                <br />
-                <br />
-                {customer['long-description']}
               </p>
               <div className='customer-page'>
                 <img src={customer['img-page']} alt={customer.name} />
