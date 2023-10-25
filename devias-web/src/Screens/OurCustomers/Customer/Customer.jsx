@@ -61,11 +61,17 @@ export default function Costumer() {
                   Tech stack.
                 </h2>
               </div>
-              <div className='tech-card'>
-                <img src={customer['tech-img']} alt={customer['tech-name']} />
-                <p>
-                  {customer['tech-name']}
-                </p>
+              <div className='container-tech-card'>
+                {
+                  customer['tech-stack'].map((tech, ind) => (
+                    <div key={ind} className='tech-card'>
+                      <img src={tech['tech-img']} alt={tech['tech-name']} />
+                      <p>
+                        {tech['tech-name']}
+                      </p>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>
