@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 // Internal modules
 import './ContactForm.scss'
 
-export default function ContactForm (){
+export default function ContactForm ({home}){
 
   // Local State
   const [isLoading, setIsLoading] = React.useState(false)
@@ -122,7 +122,7 @@ export default function ContactForm (){
   }
 
   return (
-    <form className='contact-form' ref={form} onSubmit={sendEmail}>
+    <form className={`contact-form ${home ? 'form-home' : ''}`} ref={form} onSubmit={sendEmail}>
 
       <div className='form-container'>
 

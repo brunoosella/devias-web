@@ -10,6 +10,14 @@ import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function OurCustomers() {
 
+  React.useEffect(() => {
+
+    const container = document.getElementById('our-customers')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [])
+
   return (
     <main id='our-customers'>
       {/* Header */}

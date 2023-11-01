@@ -19,6 +19,15 @@ export default function Costumer() {
 
   const customer = projects.filter(project => project.code === client)
 
+  // Scroll effect
+  React.useEffect(() => {
+
+    const container = document.getElementById('customer-single-page')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [client])
+
   return (
     customer.map((customer, index) => (
       <main key={index} id='customer-single-page'>
@@ -45,9 +54,6 @@ export default function Costumer() {
               </div>
               <p>
                 {customer['long-description']}
-                <br />
-                <br />
-                {customer['long-description']}
               </p>
               <div className='customer-page'>
                 <img src={customer['img-page']} alt={customer.name} />
@@ -64,11 +70,17 @@ export default function Costumer() {
                   Tech stack.
                 </h2>
               </div>
-              <div className='tech-card'>
-                <img src={customer['tech-img']} alt={customer['tech-name']} />
-                <p>
-                  {customer['tech-name']}
-                </p>
+              <div className='container-tech-card'>
+                {
+                  customer['tech-stack'].map((tech, ind) => (
+                    <div key={ind} className='tech-card'>
+                      <img src={tech['tech-img']} alt={tech['tech-name']} />
+                      <p>
+                        {tech['tech-name']}
+                      </p>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>

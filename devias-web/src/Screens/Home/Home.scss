@@ -47,7 +47,7 @@
   }
 
   .services-card{
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     animation: slideDown 1.5s ease-in-out;
 
     .container{
@@ -59,15 +59,15 @@
         margin-right: calc(-.5 * var(--bs-gutter-x));
         margin-left: calc(-.5 * var(--bs-gutter-x));
 
-        .ContainerDevCard{
+        .container-dev-card{
           width: 50%;
           padding: 0 1rem;
-          .DevCard{
+          .dev-card{
             background-color: #598392;
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(../../assets/background-develop.png);
+            background-image: url(/Utilities/background-develop.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -107,17 +107,17 @@
           }
         }
 
-        .ContainerDesignCard{
+        .container-design-card{
           width: 50%;
           padding: 0 1rem;
 
-          .DesignCard{
+          .design-card{
             background-color: #EBC95C;
             color: #333;
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(Assets/background-design.png);
+            background-image: url(/Utilities/background-design.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -159,26 +159,23 @@
         }
       }
     }
-    @media (max-width: 991px){
-      margin-bottom: 80px;
-    }
   }
 
   .highlighted-project{
-      padding: 115px 0 115px 0;
-      color: #FFFFFF !important;
-      background-image: url(Assets/background.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      h2{
-        font-size: 3rem;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 500;
-        @media (max-width: 991px){
-          font-size: 2.5rem;
+    padding: 1rem 0;
+    color: #FFFFFF !important;
+    background-image: url(/Utilities/background.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    h2{
+      font-size: 3rem;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 500;
+      @media (max-width: 991px){
+        font-size: 2.5rem;
       }
-      }
-  }
+    }
+}
 }
 
 @keyframes slideRight {

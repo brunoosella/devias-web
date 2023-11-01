@@ -26,6 +26,15 @@ export default function Home() {
 
   }, [state.language])
 
+  // Scroll effect
+  React.useEffect(() => {
+
+    const container = document.getElementById('home')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [])
+
   return (
     <main id='home'>
 
@@ -52,8 +61,8 @@ export default function Home() {
       <section className='services-card'>
         <div className='container'>
           <div className='row'>
-            <div className='ContainerDevCard'>
-              <div className='DevCard'>
+            <div className='container-dev-card'>
+              <div className='dev-card'>
                 <h2>
                   {language.services.development.title}
                 </h2>
@@ -68,8 +77,8 @@ export default function Home() {
                 </h3>
               </div>
             </div>
-            <div className='ContainerDesignCard'>
-              <div className='DesignCard'>
+            <div className='container-design-card'>
+              <div className='design-card'>
                 <h2>
                   {language.services.design.title}
                 </h2>
@@ -101,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Contact form */}
-      <ContactForm />
+      <ContactForm home />
 
       <Footer />
     </main>

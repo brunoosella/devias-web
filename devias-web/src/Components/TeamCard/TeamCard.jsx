@@ -6,14 +6,14 @@ import './TeamCard.scss'
 import teamJSON from './teamCard.json'
 
 //Assets
-import mauri from 'Assets/mauri.png'
-import andres from 'Assets/andres.png'
-import vicky from 'Assets/vicky.png'
-import juanca from 'Assets/juanca.png'
-import guly from 'Assets/guly.png'
-import vilma from 'Assets/vilma.png'
-import bruno from 'Assets/bruno.png'
-import rafa from 'Assets/rafa.png'
+import mauri from 'Assets/Staff/mauri.png'
+import andres from 'Assets/Staff/andres.png'
+import vicky from 'Assets/Staff/vicky.png'
+import juanca from 'Assets/Staff/juanca.png'
+import guly from 'Assets/Staff/guly.png'
+import vilma from 'Assets/Staff/vilma.png'
+import bruno from 'Assets/Staff/bruno.png'
+import rafa from 'Assets/Staff/rafa.png'
 
 export default function TeamCard() {
 
