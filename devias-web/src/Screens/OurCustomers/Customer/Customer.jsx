@@ -19,6 +19,15 @@ export default function Costumer() {
 
   const customer = projects.filter(project => project.code === client)
 
+  // Scroll effect
+  React.useEffect(() => {
+
+    const container = document.getElementById('customer-single-page')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [client])
+
   return (
     customer.map((customer, index) => (
       <main key={index} id='customer-single-page'>

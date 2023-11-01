@@ -17,8 +17,15 @@ export default function ContactUs() {
   const center = {lat: -33.118228960761876, lng: -64.36557908465618}
   const zoom = 16
 
-  // Methods
+  React.useEffect(() => {
 
+    const container = document.getElementById('contact-us')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [])
+
+  // Methods
   const render = (status) => {
 
     switch (status) {

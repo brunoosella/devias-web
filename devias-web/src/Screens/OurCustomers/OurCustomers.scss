@@ -45,7 +45,7 @@
           font-family: 'Roboto', sans-serif;
           font-size: 1.5rem;
           color: #333;
-          background-image: url(Assets/Utilities/backround-card.png);
+          background-image: url(/Utilities/backround-card.png);
           background-position: right top;
           background-repeat: no-repeat;
           border-radius: 10px;
@@ -69,7 +69,7 @@
   }
 
   .container-project-detail {
-    padding: 115px 0 115px 0;
+    padding: 2rem 0;
     background-color: #FAFAFA;
 
     .container {
@@ -105,6 +105,10 @@
             }
           }
         }
+      }
+
+      button, i{
+        color: #598392;
       }
     }
   }

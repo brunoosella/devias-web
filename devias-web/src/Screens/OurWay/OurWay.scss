@@ -75,7 +75,7 @@
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(Assets/background-develop.png);
+            background-image: url(/Utilities/background-develop.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -129,7 +129,7 @@
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(Assets/background-design.png);
+            background-image: url(/Utilities/background-design.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -183,9 +183,9 @@
   }
 
   .highlighted-project {
-    padding: 115px 0 115px 0;
+    padding: 1rem 0;
     color: #FFFFFF !important;
-    background-image: url(Assets/background.png);
+    background-image: url(/Utilities/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 

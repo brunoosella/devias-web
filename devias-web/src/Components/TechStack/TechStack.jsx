@@ -5,13 +5,13 @@ import React from 'react'
 import './TechStack.scss'
 
 // Assets
-import logoReact from 'Assets/TechStack/logo-react.png'
-import logoRails from 'Assets/TechStack/logo-rails.png'
-import logoFigma from 'Assets/TechStack/logo-figma.png'
+import logoReact from '/techStack/logo-react.png'
+import logoRails from '/techStack/logo-rails.png'
+import logoFigma from '/techStack/logo-figma.png'
 
 export default function TechStack() {
-  // Constant
 
+  // Constants
   const tech = [
     {
       name: 'React',
@@ -52,4 +52,5 @@ export default function TechStack() {
       </div>
     </section>
   )
+
 }

@@ -10,6 +10,15 @@ import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function AboutUs() {
 
+  // Scroll Effect
+  React.useEffect(() => {
+
+    const container = document.getElementById('about-us')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [])
+
   return (
     <main id='about-us'>
       <Header />

@@ -47,7 +47,7 @@
   }
 
   .services-card{
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     animation: slideDown 1.5s ease-in-out;
 
     .container{
@@ -67,7 +67,7 @@
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(Assets/Utilities/background-develop.png);
+            background-image: url(/Utilities/background-develop.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -117,7 +117,7 @@
             padding: 48px;
             border-radius: 10px;
             min-height: 370px;
-            background-image: url(Assets/Utilities/background-design.png);
+            background-image: url(/Utilities/background-design.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right;
@@ -159,15 +159,12 @@
         }
       }
     }
-    @media (max-width: 991px){
-      margin-bottom: 80px;
-    }
   }
 
   .highlighted-project{
-    padding: 115px 0 115px 0;
+    padding: 1rem 0;
     color: #FFFFFF !important;
-    background-image: url(Assets/Utilities/background.png);
+    background-image: url(/Utilities/background.png);
     background-repeat: no-repeat;
     background-size: cover; 
     h2{

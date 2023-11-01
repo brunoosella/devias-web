@@ -93,3 +93,40 @@
     align-items: center;
   }
 }
+
+#container-button-spinner{
+  width: 100%;
+  min-height: 3rem;
+  max-height: 3rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+
+  button{
+    font-size: 1.5rem;
+    opacity: .8;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover{
+      border-color: transparent;
+    }
+
+    &:focus-visible, &:focus{
+      outline: transparent;
+    }
+
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    i {
+      opacity: .8;
+      font-size: 1.5rem;
+    }
+  }
+  
+}

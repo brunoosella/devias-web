@@ -12,13 +12,21 @@ import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 
 export default function OurWay() {
 
+  // Scroll effect
+  React.useEffect(() => {
+
+    const container = document.getElementById('our-way')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [])
+
   return (
     <main id='our-way'>
       <Header />
 
       {/* WhatsApp Bubble */}
       <WhatsappBubble />
-
 
       {/* Section title */}
       <section className='primari-section'>
@@ -80,7 +88,7 @@ export default function OurWay() {
           </div>
         </div>
       </section>
-      <TechStack/>
+      <TechStack />
       {/* Section projects */}
       <section className='highlighted-project'>
         <div className='container'>

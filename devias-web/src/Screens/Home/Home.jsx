@@ -26,6 +26,15 @@ export default function Home() {
 
   }, [state.language])
 
+  // Scroll effect
+  React.useEffect(() => {
+
+    const container = document.getElementById('home')
+
+    container.scrollIntoView({behavior: 'smooth'})
+
+  }, [])
+
   return (
     <main id='home'>
 
@@ -101,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Contact form */}
-      <ContactForm />
+      <ContactForm home />
 
       <Footer />
     </main>
