@@ -3,16 +3,26 @@ import React from 'react'
 
 //Internal modules
 import './ItemStep.scss'
-import itemStepJson from './itemStep.json'
+import {AppContext} from '../../AppContext'
 import {GoChevronDown} from 'react-icons/go'
 
 export default function ItemStep() {
 
-  // Constants
-  const step = itemStepJson.items
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const [step, setStep] = React.useState(state.language_content.our_way.items)
 
   // Local state
   const [isOpen, setIsOpen] = React.useState({})
+
+  // Effects
+  React.useEffect(() =>{
+
+    setStep(state.language_content.our_way.items)
+
+  },[state.language])
 
   // Methods
   const handleStepToggle = (number) => {

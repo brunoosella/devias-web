@@ -14,6 +14,8 @@
       "legend": "We work along our customers to deliver the best solutions."
     },
     "services": {
+      "label_section":"— Our process",
+      "title_section":"This is how we work.",
       "development": {
         "title": "Development",
         "service_1": "Back-End Development",
@@ -32,6 +34,49 @@
       "title": "Check out our projects",
       "projects": {}
     }
+  },
+  "our_customers": {
+    "label":"— Meet our customers",
+    "title":"Take a look at what we’ve been working on",
+    "card": "We are proud to have launched a lot of products, from landing pages to large web applications. We create solutions focused on scalability, performance and user experience."
+  },
+  "about_us":{
+    "label": "— Hello from Argentina",
+    "title": "We are Devias.",
+    "card": "We are a small team with great strength. \n We work along our customers to deliver the best solutions for them, customized to their needs, by using the latest programming tech and the best team work tools."
+  },
+  "our_way":{
+    "items": [
+      {
+        "name": "Research",
+        "description": "The initial – and most important – stage for any development project is research. At our firm, research constitutes about 60% of all development processes; the other 40% is divided among the remaining four tactics.\n Before any technical research is done we start by researching the human element. \n We'll work to understand your expectations and motivations in order to create a great software development experience.\nOnce your expectations are established, then we'll evaluate the technology that's required to fulfill these needs.",
+        "number": 1
+      },
+      {
+        "name": "Ideation",
+        "description": "Once your needs and expectations are understood and research into all technical aspects is complete, the creative process begins.\nDuring ideation, developers get their ideas churning. Some may be new or revolutionary, and others may simply be improvements on existing solutions. Regardless, the creative team to be continue to analyze the ideas and combine them to create a solution that satisfies your needs and expectations. During this process, various needs may surface which you never knew existed -- establishing these unmet needs also adds value, so time spent hashing out ideas is well spent.",
+        "number": 2
+      },
+      {
+        "name": "Design",
+        "description": "When all ideas have been selected, the front-end design process begins. First, we create low-fidelity prototypes. These are rough concepts early in the process that we use to test the various structures and workflows of the solution. \nOnce the final low-fidelity mockup is determined, the visual, interaction and User Interface (UI) designers further tweak the idea for a high-fidelity prototype that will display how the solution will appear and perform. Once these behaviors are studied, the next step is to create an interactive User Experience (UX) prototype for testing.",
+        "number": 3
+      },
+      {
+        "name": "Development",
+        "description": "With the design process complete, you can proceed to development by creating a back-end solution to support the front-end design. The development process involves studying the data, the behaviors found during the design process, producing a model of the database and selecting the best  server-side language for the project.",
+        "number": 4
+      },
+      {
+        "name": "Iteration",
+        "description": "Once the product is developed and launched with you approval, an iterative cycle of testing begins. This iteration process exists in all of the above stages, but it’s most imperative following the product launch.\nWhile gathering post-launch analytics of performance, we'll also revisit the business’ needs and ensure that the solution is meeting your expectations. Once we have all knowledge in hand, we can continue to work with you to further refine their products and create additional solutions.",
+        "number": 5
+      }
+    ]
+  },
+  "contact": {
+    "title" : "— Contact",
+    "sub_title":"Known us"
   },
   "footer": {
     "links": {

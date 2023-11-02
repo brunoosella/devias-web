@@ -7,7 +7,7 @@ import './Customer.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
-import json from 'Components/ProjectDetails/project.json'
+import json from 'Components/ProjectDetails/project.spanish.json'
 
 export default function Costumer() {
 
