@@ -7,9 +7,17 @@ import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
+import {AppContext} from '../../AppContext'
 
 export default function OurCustomers() {
 
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const[language, setLanguage] = React.useState(state.language_content.our_customers)
+
+  // Effects
   React.useEffect(() => {
 
     const container = document.getElementById('our-customers')
@@ -17,6 +25,13 @@ export default function OurCustomers() {
     container.scrollIntoView({behavior: 'smooth'})
 
   }, [])
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.our_customers)
+
+  }, [state.language])
 
   return (
     <main id='our-customers'>
@@ -31,12 +46,10 @@ export default function OurCustomers() {
         <div className='container'>
           <div className='main-title'>
             <h5>
-              — Meet our customers
+              {language.label}
             </h5>
             <h1>
-              Take a look at what we’ve
-              <br />
-              been working on
+              {language.title}
             </h1>
           </div>
         </div>
@@ -46,8 +59,7 @@ export default function OurCustomers() {
         <div className='container'>
           <div className='container-card'>
             <div className='text-card'>
-              <p>We are proud to have launched a lot of products, from landing pages to large web applications.</p>
-              <p>We create solutions focused on scalability, performance and user experience.</p>
+              {language.card}
             </div>
           </div>
         </div>

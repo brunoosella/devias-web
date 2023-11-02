@@ -7,8 +7,15 @@ import TeamCard from 'Components/TeamCard/TeamCard'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
+import {AppContext} from '../../AppContext'
 
 export default function AboutUs() {
+
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const [language, setLanguage] = React.useState(state.language_content.about_us)
 
   // Scroll Effect
   React.useEffect(() => {
@@ -18,6 +25,13 @@ export default function AboutUs() {
     container.scrollIntoView({behavior: 'smooth'})
 
   }, [])
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.about_us)
+
+  }, [state.language])
 
   return (
     <main id='about-us'>
@@ -30,10 +44,10 @@ export default function AboutUs() {
         <div className='container'>
           <div className='main-title'>
             <h5>
-              — Hello from Argentina
+              {language.label}
             </h5>
             <h1>
-              We are Devias.
+              {language.title}
             </h1>
           </div>
         </div>
@@ -42,8 +56,7 @@ export default function AboutUs() {
         <div className='container'>
           <div className='container-card'>
             <div className='text-card'>
-              <p>We are a small team with great strength.</p>
-              <p>We work along our customers to deliver the best solutions for them, customized to their needs, by using the latest programming tech and the best team work tools.</p>
+              {language.card}
             </div>
           </div>
         </div>

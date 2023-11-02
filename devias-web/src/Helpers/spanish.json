@@ -14,6 +14,8 @@
       "legend": "Trabajamos junto a nuestros clientes para ofrecer las mejores soluciones."
     },
     "services": {
+      "label_section": "— Nuestro proceso",
+      "title_section": "Así es como trabajamos.",
       "development": {
         "title": "Desarrollo",
         "service_1": "Desarrollo Back-End",
@@ -32,6 +34,49 @@
       "title": "Echa un vistazo a nuestros proyectos",
       "projects": {}
     }
+  },
+  "our_customers": {
+    "label": "— Conoce a nuestros clientes",
+    "title": "Echa un vistazo a lo que hemos estado haciendo",
+    "card": "Estamos orgullosos de haber lanzado una cantidad importante de productos al mercado, desde landings pages hasta complejas aplicaciones webs. \n Creamos soluciones enfocados en la escalabilidad, la performance, y la experiencia de usuario"
+  },
+  "about_us": {
+    "label": "— Hola desde Argentina",
+    "title": "Somos Devias.",
+    "card": "Somos un pequeño equipo con gran potencia. \n Trabajamos con nuestros clientes para brindarles las mejores soluciones, personalizar sus necesidades, utilizando siempre la ùltima tecnologìa en programaciòn y las mejores herramientas de trabajo en equipo "
+  },
+  "our_way": {
+    "items": [
+      {
+        "name": "Investigación",
+        "description": "La etapa inicial (la más importante) de cualquier proyecto de desarrollo es la investigación. En nuestra compañía, la investigación constituye alrededor del 60% de todos los procesos de desarrollo; el otro 40% se divide entre las cuatro tácticas restantes.\n Antes de realizar cualquier investigación técnica, comenzamos investigando el elemento humano. \n Siempre trabajarenmos para comprender sus expectativas y motivaciones a fin de crear una excelente experiencia de desarrollo de software.\nUna vez establecidas sus expectativas, evaluaremos la tecnología necesaria para satisfacer estas necesidades.",
+        "number": 1
+      },
+      {
+        "name": "Ideación",
+        "description": "Una vez que sus necesidades y expectativas han sido atendidas e internalizadas y la invetigación sobre los aspectos técnicos ha finalizado, el proceso creativo comienza.\nDurante la etapa de Ideación, los desarrolladores echan a andar sus ideas. Algunas podrán ser nuevas o revolucionarias, otras podrán ser pequeñas y simples mejoras a soluciones existentes. De cualquier forma, el equipo creativo continuará analizando las ideas y combinándolas para crear una solución que satisfaga sus necesidades y expectativas. Durante este proceso, pueden surgir varias necesidades que nunca supo que existían; establecer estas necesidades insatisfechas también agrega valor, por lo que el tiempo dedicado a analizar ideas es una buena inversión.",
+        "number": 2
+      },
+      {
+        "name": "Diseño",
+        "description": "Cuando se han seleccionado todas las ideas, comienza el proceso de diseño del front-end. Primero, creamos prototipos de baja fidelidad. Estos son conceptos aproximados al principio del proceso que utilizamos para probar las diversas estructuras y flujos de trabajo de la solución. \nUna vez que se determina la maqueta final de baja fidelidad, los diseñadores gráficos, de interacción y de interfaz de usuario (UI) modifican aún más la idea para un prototipo de alta fidelidad que mostrará cómo aparecerá y funcionará la solución. Una vez estudiados estos comportamientos, el siguiente paso es crear un prototipo de Experiencia de Usuario (UX) interactivo para realizar pruebas.",
+        "number": 3
+      },
+      {
+        "name": "Desarrollo",
+        "description": "Una vez completado el proceso de diseño, puede continuar con el desarrollo creando una solución de back-end para respaldar el diseño de front-end. El proceso de desarrollo implica estudiar los datos, los comportamientos encontrados durante el proceso de diseño, producir un modelo de la base de datos y seleccionar el mejor lenguaje del lado del servidor para el proyecto.",
+        "number": 4
+      },
+      {
+        "name": "Iteración",
+        "description": "Una vez que el producto se desarrolla y lanza con su aprobación, comienza un ciclo iterativo de pruebas. Este proceso de iteración existe en todas las etapas anteriores, pero es más imperativo después del lanzamiento del producto.\nMientras recopilamos análisis de rendimiento posteriores al lanzamiento, también revisaremos las necesidades del negocio y nos aseguraremos de que la solución cumpla con sus expectativas. Una vez que tengamos todo el conocimiento a mano, podremos continuar trabajando con usted para perfeccionar aún más sus productos y crear soluciones adicionales.",
+        "number": 5
+      }
+    ] 
+  },
+  "contact": {
+    "title": "— Contacto",
+    "sub_title": "Conocénos"
   },
   "footer": {
     "links":{

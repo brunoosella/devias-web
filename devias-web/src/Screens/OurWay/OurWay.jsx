@@ -9,8 +9,15 @@ import ItemStep from 'Components/ItemStep/ItemStep'
 import Footer from 'Components/Footer/Footer'
 import TechStack from 'Components/TechStack/TechStack'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
+import {AppContext} from '../../AppContext'
 
 export default function OurWay() {
+
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const [language, setLanguage] = React.useState(state.language_content.home)
 
   // Scroll effect
   React.useEffect(() => {
@@ -20,6 +27,13 @@ export default function OurWay() {
     container.scrollIntoView({behavior: 'smooth'})
 
   }, [])
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.home)
+
+  }, [state.language])
 
   return (
     <main id='our-way'>
@@ -33,10 +47,10 @@ export default function OurWay() {
         <div className='container'>
           <div className='main-title'>
             <h5>
-              — Our process
+              {language.services.label_section}
             </h5>
             <h1>
-              This is how we work.
+              {language.services.title_section}
             </h1>
           </div>
         </div>
@@ -50,38 +64,39 @@ export default function OurWay() {
         </div>
       </section>
       {/* Section cards */}
+
       <section className='services-cards'>
         <div className='container'>
           <div className='row'>
             <div className='container-dev-card'>
               <div className='dev-card'>
                 <h2>
-                  Development.
+                  {language.services.development.title}
                 </h2>
                 <h3>
-                  Back-End Development
+                  {language.services.development.service_1}
                 </h3>
                 <h3>
-                  Front-End Development
+                  {language.services.development.service_2}
                 </h3>
                 <h3>
-                  iOS / Android Development
+                  {language.services.development.service_3}
                 </h3>
               </div>
             </div>
             <div className='container-design-card'>
               <div className='design-card'>
                 <h2>
-                  Design
+                  {language.services.design.title}
                 </h2>
                 <h3>
-                  UX Design
+                  {language.services.design.service_1}
                 </h3>
                 <h3>
-                  UI Design
+                  {language.services.design.service_2}
                 </h3>
                 <h3>
-                  Wireframes
+                  {language.services.design.service_3}
                 </h3>
               </div>
             </div>
@@ -93,7 +108,7 @@ export default function OurWay() {
       <section className='highlighted-project'>
         <div className='container'>
           <h2>
-            Check out our projects.
+            {language.projects_section.title}
           </h2>
           <ProjectDetails />
         </div>

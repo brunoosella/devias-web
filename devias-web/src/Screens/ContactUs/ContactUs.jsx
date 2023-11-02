@@ -9,8 +9,15 @@ import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import MyMapComponent from 'Components/Map/MyMapComponent'
+import {AppContext} from '../../AppContext'
 
 export default function ContactUs() {
+
+  // Global state
+  const {state} = React.useContext(AppContext)
+
+  // Local state
+  const [language, setLanguage] = React.useState(state.language_content.contact)
 
   // Constants
   const API_KEY = 'AIzaSyA7u1yNadkGlTvSssNK6UbIIC9L0FumQto'
@@ -24,6 +31,13 @@ export default function ContactUs() {
     container.scrollIntoView({behavior: 'smooth'})
 
   }, [])
+
+  // Language Effect
+  React.useEffect(() => {
+
+    setLanguage(state.language_content.contact)
+
+  }, [state.language])
 
   // Methods
   const render = (status) => {
@@ -53,10 +67,10 @@ export default function ContactUs() {
         <div className='container'>
           <div className='main-title'>
             <h5>
-              — Contact
+              {language.title}
             </h5>
             <h1>
-              Know us.
+              {language.sub_title}
             </h1>
           </div>
         </div>
