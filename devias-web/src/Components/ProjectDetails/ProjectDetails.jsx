@@ -2,13 +2,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useParams} from 'react-router'
+import {AppContext} from '../../AppContext'
 
 // Internal modules
 import './ProjectDetails.scss'
-import json from './project.json'
+import json from './project.spanish.json'
 import Card from './Card/Card'
 
 export default function ProjectDetails({customerView}) {
+
+  // Global State
+  const {state} = React.useContext(AppContext)
 
   // Local State
   const [projectsList, setProjectsList]       = React.useState([])
