@@ -14,6 +14,9 @@ import guly from 'Assets/Staff/guly.png'
 import vilma from 'Assets/Staff/vilma.png'
 import bruno from 'Assets/Staff/bruno.png'
 import rafa from 'Assets/Staff/rafa.png'
+import fer from 'Assets/Staff/fer-sydor.png'
+import horacio from 'Assets/Staff/horacio.jpg'
+import nico from 'Assets/Staff/nico.png'
 
 export default function TeamCard() {
 
@@ -26,7 +29,10 @@ export default function TeamCard() {
     guly,
     vilma,
     bruno,
-    rafa
+    rafa,
+    fer,
+    horacio,
+    nico
   ]
 
   const team = teamJSON.team

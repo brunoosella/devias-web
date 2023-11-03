@@ -3,43 +3,47 @@
     {
       "name": "Mauri",
       "img": 0,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "CEO"
     },{
       "name": "Andres",
       "img": 1,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Frontend Developer"
     },{
       "name": "Vicky",
       "img": 2,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Accountant Manager"
     },{
       "name": "Juanca",
       "img": 3,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Data Analyst"
     },{
       "name": "Guly",
       "img": 4,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Backend Developer"
     },{
       "name": "Vilma",
       "img": 5,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Backend Developer"
     },{
       "name": "Bruno",
       "img": 6,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Frontend Developer"
     },{
       "name": "Rafa",
       "img": 7,
-      "job": "Puesto",
-      "description": "Description of job"
+      "job": "Talent Manager"
+    },{
+      "name": "Fer Sydor",
+      "img": 8,
+      "job": "Designer"
+    },{
+      "name": "Horacio",
+      "img": 9,
+      "job": "Backend Developer"
+    },{
+      "name": "Nico",
+      "img": 10,
+      "job": "Trainee Developer"
     }
   ]
 }
