@@ -6,7 +6,6 @@ import {AppContext} from '../../AppContext'
 
 // Internal modules
 import './ProjectDetails.scss'
-import json from './project.spanish.json'
 import Card from './Card/Card'
 
 export default function ProjectDetails({customerView}) {
@@ -15,7 +14,7 @@ export default function ProjectDetails({customerView}) {
   const {state} = React.useContext(AppContext)
 
   // Local State
-  const [projectsList, setProjectsList]       = React.useState([])
+  const [projectsList, setProjectsList]       = React.useState(state.language_content.our_customers.projects)
   const [visibleProjects, setVisibleProjects] = React.useState(3)
   const [loading, setLoading]                 = React.useState(false)
 
@@ -28,7 +27,7 @@ export default function ProjectDetails({customerView}) {
 
       if (customerView) {
 
-        const newList = json.projects.filter(item => item.code !== client)
+        const newList = state.language_content.our_customers.projects.filter(item => item.code !== client)
 
         setProjectsList(newList)
 
@@ -36,11 +35,11 @@ export default function ProjectDetails({customerView}) {
 
     } else {
 
-      setProjectsList(json.projects)
+      setProjectsList(state.language_content.our_customers.projects)
 
     }
 
-  }, [client])
+  }, [client, state.language])
 
   const showMore = () => {
 

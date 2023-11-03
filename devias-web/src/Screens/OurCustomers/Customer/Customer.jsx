@@ -7,12 +7,16 @@ import './Customer.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
-import json from 'Components/ProjectDetails/project.spanish.json'
+import {AppContext} from '../../../AppContext'
 
 export default function Costumer() {
 
+  // Global State
+  const {state} = React.useContext(AppContext)
+
   // Constants
-  const projects = json.projects
+  const [projects, setProjects] = React.useState(state.language_content.our_customers.projects)
+  // const projects = json.projects
   const isInCustomerView = true
 
   const {client} = useParams()
@@ -27,6 +31,12 @@ export default function Costumer() {
     container.scrollIntoView({behavior: 'smooth'})
 
   }, [client])
+
+  React.useEffect(() => {
+
+    setProjects(state.language_content.our_customers.projects)
+
+  }, [state.language])
 
   return (
     customer.map((customer, index) => (
