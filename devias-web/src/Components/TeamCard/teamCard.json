@@ -44,6 +44,18 @@
       "name": "Nico",
       "img": 10,
       "job": "Trainee Developer"
+    },{
+      "name": "Ana",
+      "img": 11,
+      "job": "Accountant"
+    },{
+      "name": "Agus",
+      "img": 12,
+      "job": "Frontend Developer"
+    },{
+      "name": "Lucho",
+      "img": 13,
+      "job": "Designer"
     }
   ]
 }
