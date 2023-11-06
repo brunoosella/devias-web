@@ -142,10 +142,8 @@
   .highlighted-project {
     padding: 115px 0 115px 0;
     color: #FFFFFF !important;
-    background-image: url(/Utilities/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background: linear-gradient(90deg, #78a2a8 0%, #466872 100%);
+    
     h2 {
       font-size: 3rem;
       font-family: 'Ubuntu', sans-serif;

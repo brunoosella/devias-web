@@ -185,9 +185,7 @@
   .highlighted-project {
     padding: 1rem 0;
     color: #FFFFFF !important;
-    background-image: url(/Utilities/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(90deg, #78a2a8 0%, #466872 100%);
 
     .container {
       h2 {
