@@ -42,7 +42,7 @@
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
@@ -51,8 +51,4 @@
       flex-direction: column;
     }
   }
-
-  /* @media all and (max-width: 768px) {
-    width: auto;
-  } */
 }

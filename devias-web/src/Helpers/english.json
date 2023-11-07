@@ -24,9 +24,9 @@
       },
       "design": {
         "title": "Design",
-        "service_1": "UX Design",
-        "service_2": "UI Design",
-        "service_3": "Wireframes"
+        "service_1": "UX Research",
+        "service_2": "UX/UI Design",
+        "service_3": "Wireframes, Mockups and Interactive Prototypes"
       }
     },
     "technologies": {},
@@ -326,7 +326,7 @@
   },
   "contact": {
     "title" : "— Contact",
-    "sub_title":"Known us"
+    "sub_title":"Get to know us"
   },
   "footer": {
     "links": {
