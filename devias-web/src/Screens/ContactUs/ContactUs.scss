@@ -42,15 +42,17 @@
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 
     @media all and (max-width: 768px) {
       flex-direction: column;
     }
   }
 
-  @media all and (max-width: 768px) {
+  /* @media all and (max-width: 768px) {
     width: auto;
-  }
+  } */
 }

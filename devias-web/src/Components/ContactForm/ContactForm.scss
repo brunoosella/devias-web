@@ -137,9 +137,12 @@
     }
   }
 
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 525px) {
     width: 90%;
-    height: 100%;
     margin-bottom: 3rem;
+  }
+
+  @media all and (max-width: 503px) {
+    height: 600px;
   }
 }
