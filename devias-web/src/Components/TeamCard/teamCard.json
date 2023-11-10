@@ -56,6 +56,10 @@
       "name": "Lucho",
       "img": 13,
       "job": "Designer"
+    },{
+      "name": "Eli",
+      "img": 14,
+      "job": "Comunication Manager"
     }
   ]
 }

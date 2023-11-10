@@ -20,6 +20,7 @@ import nico from 'Assets/Staff/nico.png'
 import ana from 'Assets/Staff/ana.png'
 import agus from 'Assets/Staff/agus.png'
 import lucho from 'Assets/Staff/lucho.png'
+import eli from 'Assets/Staff/eli.png'
 
 export default function TeamCard() {
 
@@ -38,7 +39,8 @@ export default function TeamCard() {
     nico,
     ana,
     agus,
-    lucho
+    lucho,
+    eli
   ]
 
   const team = teamJSON.team
