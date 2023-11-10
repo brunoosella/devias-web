@@ -9,7 +9,6 @@ export default function ContactForm ({home}){
 
   // Local State
   const [isLoading, setIsLoading] = React.useState(false)
-
   const [formData,setFormData] = React.useState({
     user_name: '',
     user_last_name: '',
@@ -17,8 +16,6 @@ export default function ContactForm ({home}){
     user_email: '',
     consult: ''
   })
-
-  // Status to check touched
   const [touchedFields, setTouchedFields] = React.useState({
     user_name: false,
     user_last_name: false,
@@ -26,12 +23,20 @@ export default function ContactForm ({home}){
     user_email: false,
     consult: false
   })
-
-  // Used to initialize the variable to false
   const [allFieldsValid, setAllFieldsValid] = React.useState(false)
 
   // Constants
-  const form = React.useRef()
+  const form = React.useRef(null)
+
+  // Effects
+
+  // Verify is all fields valid
+  React.useEffect(() => {
+
+    const newAllFieldsValid = Object.keys(formData).every((fieldName) => isFieldValid(fieldName))
+    setAllFieldsValid(newAllFieldsValid)
+
+  }, [formData, touchedFields])
 
   // Save the new values
   const handleChange = (e) => {
@@ -41,7 +46,7 @@ export default function ContactForm ({home}){
 
   }
 
-  // Checkd touched
+  // Check blur
   const handleBlur = (e) => {
 
     const {name} = e.target
@@ -84,33 +89,25 @@ export default function ContactForm ({home}){
 
   }
 
-  // Effects
-
-  // Verify is all fields valid
-  React.useEffect(() => {
-
-    const newAllFieldsValid = Object.keys(formData).every((fieldName) => isFieldValid(fieldName))
-    setAllFieldsValid(newAllFieldsValid)
-
-  }, [formData, touchedFields])
-
   // Request of EmailJS
   const sendEmail = (e) => {
 
     e.preventDefault()
     setIsLoading(true)
 
-    emailjs.sendForm('service_f9jpfqc', 'template_d4lzjah', form.current, 'fzV6NkqgeJ4dUbYVN')
+    emailjs.sendForm('service_7zoo6s6', 'template_tpsiyhh', form.current, 'yT0rf2WJTNyJnW15P')
       .then((result) => {
 
         console.log(result.text)
-        setIsLoading(false)
         form.current.reset()
         setAllFieldsValid(false)
         setFormData({
           ...formData,
           consult: ''
         })
+
+        location.reload()
+        setIsLoading(false)
 
       }, (error) => {
 
