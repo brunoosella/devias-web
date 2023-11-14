@@ -9,6 +9,7 @@
           font-family: 'Ubuntu', sans-serif;
           font-weight: 300;
           color: #828282;
+          animation: slideRight 0.5s ease-in-out;
         }
         h1{
           font-size: 6rem;
@@ -18,6 +19,7 @@
           margin-bottom: 0.5rem;
           font-weight: 500;
           line-height: 1.2;
+          animation: slideRight 1s ease-in-out;
 
           @media (max-width: 991px) {
             font-size: 3rem;
@@ -33,6 +35,8 @@
     }
   }
   .section-info{
+    animation: slideDown 1.5s ease-in-out;
+
     .container{
       .container-card{
         width: 100%;
@@ -86,5 +90,27 @@
         }
       }
     }
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

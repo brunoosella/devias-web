@@ -57,7 +57,9 @@
     max-height: 0;
     border-top: 0;
     overflow: hidden;
-    transition: max-height .35s ease-in-out;
+    transition: 
+      max-height .35s ease-out,
+      border-top .35s ease;
 
     .step-description {
       color: #333;
@@ -66,7 +68,7 @@
     }
 
     &.show {
-      max-height: 500px;
+      max-height: 300px;
       border-top: 0.5px solid #9d9d9d40;
     }
   }
