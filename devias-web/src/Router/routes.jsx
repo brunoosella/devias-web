@@ -11,6 +11,7 @@ import OurWay from '../Screens/OurWay/OurWay'
 import ContactUs from '../Screens/ContactUs/ContactUs'
 import Customer from '../Screens/OurCustomers/Customer/Customer'
 import ErrorPage from './ErrorPage'
+import Careers from '../Screens/Careers/Careers'
 
 const router = createBrowserRouter([
   {
@@ -39,8 +40,18 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage />
   },
   {
+    path: '/careers',
+    element: <Careers />,
+    errorElement:<ErrorPage />
+  },
+  {
     path: '/customer/:client',
     element: <Customer />,
+    errorElement:<ErrorPage />
+  },
+  {
+    path: '/careers/:career',
+    element: <Careers />, //Replace for correct screen
     errorElement:<ErrorPage />
   }
 
