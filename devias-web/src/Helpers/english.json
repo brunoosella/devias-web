@@ -327,7 +327,21 @@
   "careers": {
     "label": "— Careers",
     "title": "Work with us.",
-    "title_position": "Open positions."
+    "title_position": "Open positions.",
+    "positions": [
+      {
+        "code": "front-end",
+        "area": "Developer",
+        "position": "Front-End",
+        "visible": true
+      },
+      {
+        "code": "back-end",
+        "area": "Developer",
+        "position": "Back-End",
+        "visible": false
+      }
+    ]
   },
   "contact": {
     "title" : "— Contact",

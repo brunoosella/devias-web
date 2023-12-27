@@ -12,6 +12,7 @@ import ContactUs from '../Screens/ContactUs/ContactUs'
 import Customer from '../Screens/OurCustomers/Customer/Customer'
 import ErrorPage from './ErrorPage'
 import Careers from '../Screens/Careers/Careers'
+import Position from '../Screens/Careers/Position/Position'
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/careers/:career',
-    element: <Careers />, //Replace for correct screen
+    element:  <Position />,
     errorElement:<ErrorPage />
   }
 

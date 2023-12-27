@@ -57,9 +57,15 @@ export default function Careers() {
       </section>
 
       <section className='section-positions'>
-        <CareerPosition />
+        <div className='container'>
+          <h2 className='title-positions'>
+            {language.title_position}
+          </h2>
+          <CareerPosition />
+        </div>
       </section>
 
+      {/* Footer */}
       <Footer />
     </main>
   )

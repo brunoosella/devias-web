@@ -12,38 +12,19 @@ export default function CareerPosition() {
   const {state} = React.useContext(AppContext)
 
   // Local state
-  const [language, setLanguage] = React.useState(state.language_content.careers)
-
-  // Constants
-  const positions = [
-    {
-      code: 'front-end',
-      area: 'Developer',
-      position: 'Front-End',
-      visible: true
-    },
-    {
-      code: 'back-end',
-      area: 'Developer',
-      position: 'Back-End',
-      visible: false
-    }
-  ]
+  const [language, setLanguage] = React.useState(state.language_content.careers.positions)
 
   // Language Effect
   React.useEffect(() => {
 
-    setLanguage(state.language_content.careers)
+    setLanguage(state.language_content.careers.positions)
 
   }, [state.language])
 
   return (
-    <div className='container'>
-      <h2 className='title-positions'>
-        {language.title_position}
-      </h2>
+    <>
       {
-        positions.map((position, index) => (
+        language.map((position, index) => (
           position.visible &&
           <button key={index} className='career'>
             <Link to={`/careers/${position.code}`}>
@@ -59,7 +40,7 @@ export default function CareerPosition() {
           </button>
         ))
       }
-    </div>
+    </>
   )
 
 }
