@@ -5,7 +5,8 @@
       "customers": "Our Customers",
       "about_us":"About Us",
       "our_way":"Our Way",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "careers": "Careers"
     }
   },
   "home" : {
@@ -339,7 +340,7 @@
         "code": "back-end",
         "area": "Developer",
         "position": "Back-End",
-        "visible": false
+        "visible": true
       }
     ]
   },

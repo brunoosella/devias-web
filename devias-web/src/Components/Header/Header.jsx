@@ -158,6 +158,13 @@ export default function Header() {
                 > {language.our_way}
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/careers'
+                > {language.careers}
+                </NavLink>
+              </li>
               <li className='line' />
               <li className='container-btn-contact'>
                 <NavLink
