@@ -1,0 +1,52 @@
+#form-front {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+
+  .fade-enter {
+    animation: slideDown .5s ease-in-out;
+  }
+
+  .fade-enter-active {
+    animation: slideDown .5s ease-in-out;
+  }
+
+  .fade-exit {
+    animation: slideUp .5s ease-in-out;
+  }
+
+  .fade-exit-active {
+    animation: slideUp .5s ease-in-out;
+  }
+
+  form {
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp{
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
