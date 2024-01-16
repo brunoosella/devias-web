@@ -54,10 +54,12 @@
 
   /* Content step */
   .container-step-description {
-    height: 0;
+    max-height: 0;
     border-top: 0;
     overflow: hidden;
-    transition: all .35s ease-in-out;
+    transition: 
+      max-height .35s ease-out,
+      border-top .35s ease;
 
     .step-description {
       color: #333;
@@ -66,19 +68,8 @@
     }
 
     &.show {
-      height: 150px;
-      display: flex;
+      max-height: 300px;
       border-top: 0.5px solid #9d9d9d40;
-
-      @media (max-width: 767px){
-        height: 130px;
-      }
-      @media (max-width: 575px){
-        height: 145px;
-      }
-      @media (max-width: 459px){
-        height: 190px;
-      }
     }
   }
 
@@ -94,6 +85,16 @@
   }
 
   &.step-3 {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  &.step-4 {
+    border-right: 0;
+    border-left: 0;
+  }
+  
+  &.step-5 {
     border-right: 0;
     border-left: 0;
     border-bottom: 0;

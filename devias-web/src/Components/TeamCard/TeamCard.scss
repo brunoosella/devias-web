@@ -48,7 +48,7 @@
       @media (max-width: 767px) {
         margin-top: 1rem;
       }
-      }
+    }
 
     h5 {
       color: #333;
@@ -57,20 +57,7 @@
       font-weight: 300;
       margin: 0px;
       line-height: 1.2;
-    }
-
-    .line {
-      border: 1px solid rgba(0, 0, 0, 0.1882352941);
-      margin: 1rem 0 0 0;
-      width: 85%;
-      padding: 0;
-    }
-
-    p {
-      color: #828282;
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      margin-bottom: 0;
+      text-align: center;
     }
   }
 
