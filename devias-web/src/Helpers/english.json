@@ -334,7 +334,22 @@
         "code": "front-end",
         "area": "Developer",
         "position": "Front-End",
-        "visible": true
+        "visible": true,
+        "form": {
+          "title": "We're looking for a software engineer to add to our fast-growing team.",
+          "button": "Ok",
+          "button_send": "Submit",
+          "placeholder": "Type your answer here...",
+          "user_name": "Hi there! What's your first name?This question is required.",
+          "user_last_name": "And your last name?",
+          "user_resume": "let's start with your resume. You can upload it here.",
+          "user_resume_span": "We won't ask you to manually fill out your work experience after this, we promise.",
+          "user_response": "What's the most exciting part about this job to you?",
+          "user_response_job": "What's the most exciting part about this job to you?",
+          "user_email": "Thanks. We'll look over your application and get back to you within a few days. What's your email address?",
+          "user_phone": "And finally, what's the best number to reach you at?",
+          "end_form": "Thank you for applying! We'll reach out as soon as we can."
+        }
       },
       {
         "code": "back-end",

@@ -69,7 +69,7 @@ export default function Position() {
       <section className='form-container'>
         {
           positions.map((position, index) => (
-            (position.visible && position.code === 'front-end') ? <FormFront key={index} />
+            (position.visible && position.code === 'front-end') ? <FormFront key={index} form_position={position.form} />
               :
               (position.visible && position.code === 'design') ? <FormDesign key={index} />
                 :
