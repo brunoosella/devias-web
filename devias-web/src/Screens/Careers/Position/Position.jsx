@@ -11,9 +11,7 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import ErrorPage from '../../../Router/ErrorPage'
-import FormBack from './Components/FormBack/FormBack'
-import FormFront from './Components/FormFront/FormFront'
-import FormDesign from './Components/FormDesign/FormDesign'
+import FormPosition from './Components/FormPosition/FormPosition'
 
 export default function Position() {
 
@@ -69,13 +67,7 @@ export default function Position() {
       <section className='form-container'>
         {
           positions.map((position, index) => (
-            (position.visible && position.code === 'front-end') ? <FormFront key={index} form_position={position.form} />
-              :
-              (position.visible && position.code === 'design') ? <FormDesign key={index} />
-                :
-                (position.visible && position.code === 'back-end') ? <FormBack key={index} />
-                  : null
-
+            <FormPosition key={index} form_position={position.form} />
           ))
         }
       </section>

@@ -3,9 +3,9 @@ import React from 'react'
 import {CSSTransition} from 'react-transition-group'
 
 //Internal modules
-import './FormFront.scss'
+import './FormPosition.scss'
 
-export default function FormFront({form_position}) {
+export default function FormPosition({form_position}) {
 
   // Local State
   const [step, setStep]         = React.useState(0)
