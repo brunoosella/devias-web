@@ -1,0 +1,62 @@
+#insignia-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+  .container {
+
+    .carousel-container {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease;
+      width: 20% * 5;
+  
+      .insignia {
+        flex: 0 0 20%;
+        max-width: 20%;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+  
+        &.visible {
+          opacity: 1;
+        }
+        a {
+  
+          img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .prev-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+    }
+
+    .next-button {
+      right: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+}
+
