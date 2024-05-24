@@ -10,12 +10,12 @@ export default function InsigniaClutch() {
   // Local state
   const [currentIndex, setCurrentIndex] = React.useState(0)
 
-  const insignias = [
+  const [insignias, setInsignias] = React.useState([
     {
       id: 1,
       src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
       title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      img: 'https://static.vecteezy.com/system/resources/previews/013/453/453/large_2x/number-1-3d-gold-one-free-png.png'
     },
     {
       id: 2,
@@ -63,9 +63,11 @@ export default function InsigniaClutch() {
       id: 9,
       src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
       title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      img: 'https://cdn-icons-png.flaticon.com/512/10232/10232670.png'
     }
-  ]
+  ])
+
+  const [bufferInsignias, setBufferInsignias] = React.useState([...insignias])
 
   const carouselRef = React.useRef()
 
@@ -74,7 +76,16 @@ export default function InsigniaClutch() {
 
     const interval = setInterval(() => {
 
-      setCurrentIndex((currentIndex + 1) % insignias.length)
+      if (currentIndex >= insignias.length) {
+
+        carouselRef.current.style.transition = 'none'
+        setCurrentIndex(0)
+
+      } else {
+
+        nextImage()
+
+      }
 
     }, 10000)
 
@@ -84,31 +95,39 @@ export default function InsigniaClutch() {
 
   React.useEffect(() => {
 
-    if (currentIndex === 0) {
-
-      carouselRef.current.style.transition = 'none'
-      carouselRef.current.style.transform = 'translateX(0)'
-
-    } else {
+    if (currentIndex !== 0) {
 
       carouselRef.current.style.transition = 'transform 0.5s ease'
-      carouselRef.current.style.transform = `translateX(-${currentIndex * 100 / 5}%)`
 
     }
+    carouselRef.current.style.transform = `translateX(-${currentIndex * 100 / 5}%)`
+    console.log(currentIndex)
 
-  }, [currentIndex])
+  }, [currentIndex, insignias.length])
 
   const nextImage = () => {
 
     setCurrentIndex((currentIndex + 1) % insignias.length)
-    carouselRef.current.style.transition = 'transform 0.5s ease'
-    carouselRef.current.style.transform = `translateX(-${(currentIndex + 1) * 20}%)`
+
+    if (currentIndex === insignias.length - 5) {
+
+      setInsignias([...insignias, ...bufferInsignias])
+      setBufferInsignias(insignias)
+
+    }
 
   }
 
   const previousImage = () => {
 
     setCurrentIndex(currentIndex === 0 ? insignias.length - 1 : currentIndex - 1)
+
+    if (currentIndex === 0 && bufferInsignias.length === 0) {
+
+      setBufferInsignias([...insignias])
+      setInsignias([insignias[insignias.length - 1]])
+
+    }
 
   }
 
@@ -127,7 +146,7 @@ export default function InsigniaClutch() {
               </Link>
             </div>
           ))}
-          {insignias.map((insignia, index) => (
+          {/* {insignias.map((insignia, index) => (
             <div
               className={`insignia ${index + insignias.length >= currentIndex && index + insignias.length < currentIndex + 5 ? 'visible' : 'hidden'}`}
               key={index + insignias.length}
@@ -136,7 +155,7 @@ export default function InsigniaClutch() {
                 <img src={insignia.img} alt={insignia.title} />
               </Link>
             </div>
-          ))}
+          ))} */}
         </div>
         <button className='prev-button' onClick={previousImage}>
           Anterior
