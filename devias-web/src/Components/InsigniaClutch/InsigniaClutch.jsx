@@ -3,7 +3,19 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 // Internal modules
+import {GoChevronLeft, GoChevronRight} from 'react-icons/go'
 import './InsigniaClutch.scss'
+
+// Assets
+import itServicesCompany from './Assets/top_clutch.co_it_services_company_government_argentina.png'
+import webDevelopersArgentina from './Assets/top_clutch.co_web_developers_government_argentina.png'
+import ecommerceDevelopersArgentina from './Assets/top_clutch.co_e-commerce_developers_medical_argentina.png'
+import itServicesCompanyRealEstate from './Assets/top_clutch.co_it_services_company_real_estate_argentina.png'
+import ErpConsultingCompany from './Assets/top_clutch.co_erp_consulting_company_argentina_2024.png'
+import softwareDeveloperArgentina from './Assets/top_clutch.co_software_developers_government_argentina.png'
+import softwareDeveloperRealEstate from './Assets/top_clutch.co_software_developers_real_estate_argentina.png'
+import appDevelopmentCompanyRealEstate from './Assets/top_clutch.co_app_development_company_real_estate_argentina.png'
+import itServicesCompanyMedical from './Assets/top_clutch.co_it_services_company_medical_argentina.png'
 
 export default function InsigniaClutch() {
 
@@ -12,58 +24,40 @@ export default function InsigniaClutch() {
 
   const [insignias, setInsignias] = React.useState([
     {
-      id: 1,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
       title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://static.vecteezy.com/system/resources/previews/013/453/453/large_2x/number-1-3d-gold-one-free-png.png'
+      img: itServicesCompany
     },
     {
-      id: 2,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
       title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      img: webDevelopersArgentina
     },
     {
-      id: 3,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      title: 'Top Clutch E-commerce Developers Medical Argentina',
+      img: ecommerceDevelopersArgentina
     },
     {
-      id: 4,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      title: 'Top Clutch It Services Company Real Estate Argentina',
+      img: itServicesCompanyRealEstate
     },
     {
-      id: 5,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      title: 'Top Clutch Erp Consulting Company Argentina 2024',
+      img: ErpConsultingCompany
     },
     {
-      id: 6,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      title: 'Top Clutch Software Developers Government Argentina',
+      img: softwareDeveloperArgentina
     },
     {
-      id: 7,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      title: 'Top Clutch Software Developers Real Estate Argentina',
+      img: softwareDeveloperRealEstate
     },
     {
-      id: 8,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://shareables-prod-static.clutch.co/badges/top_clutch.co_it_services_company_government_argentina.svg'
+      title: 'Top Clutch App Development Company Real Estate Argentina',
+      img: appDevelopmentCompanyRealEstate
     },
     {
-      id: 9,
-      src: 'https://shareables.clutch.co/share/badges/1086331/81795?utm_source=clutch_top_company_badge&utm_medium=image_embed',
-      title: 'Top Clutch It Services Company Government Argentina',
-      img: 'https://cdn-icons-png.flaticon.com/512/10232/10232670.png'
+      title: 'Top Clutch It Services Company Medical Argentina',
+      img: itServicesCompanyMedical
     }
   ])
 
@@ -141,27 +135,17 @@ export default function InsigniaClutch() {
               className={`insignia ${index >= currentIndex && index < currentIndex + 5 ? 'visible' : 'hidden'}`}
               key={index}
             >
-              <Link to={insignia.src} target='_blank'>
+              <Link to='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank'>
                 <img src={insignia.img} alt={insignia.title} />
               </Link>
             </div>
           ))}
-          {/* {insignias.map((insignia, index) => (
-            <div
-              className={`insignia ${index + insignias.length >= currentIndex && index + insignias.length < currentIndex + 5 ? 'visible' : 'hidden'}`}
-              key={index + insignias.length}
-            >
-              <Link to={insignia.src} target='_blank'>
-                <img src={insignia.img} alt={insignia.title} />
-              </Link>
-            </div>
-          ))} */}
         </div>
-        <button className='prev-button' onClick={previousImage}>
-          Anterior
+        <button className='slider-button prev-button' onClick={previousImage}>
+          <i className='icons'> <GoChevronLeft /> </i>
         </button>
-        <button className='next-button' onClick={nextImage}>
-          Siguiente
+        <button className='slider-button next-button' onClick={nextImage}>
+          <i className='icons'> <GoChevronRight /> </i>
         </button>
       </div>
     </div>
