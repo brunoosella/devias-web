@@ -20,9 +20,9 @@ import itServicesCompanyMedical from './Assets/top_clutch.co_it_services_company
 export default function InsigniaClutch() {
 
   // Local state
-  const [currentIndex, setCurrentIndex] = React.useState(0)
-
-  const [insignias, setInsignias] = React.useState([
+  const [currentIndex, setCurrentIndex]       = React.useState(0)
+  const [bufferInsignias, setBufferInsignias] = React.useState([...insignias])
+  const [insignias, setInsignias]             = React.useState([
     {
       title: 'Top Clutch It Services Company Government Argentina',
       img: itServicesCompany
@@ -61,11 +61,10 @@ export default function InsigniaClutch() {
     }
   ])
 
-  const [bufferInsignias, setBufferInsignias] = React.useState([...insignias])
-
+  //References
   const carouselRef = React.useRef()
 
-  // Effect
+  // Effects
   React.useEffect(() => {
 
     const interval = setInterval(() => {
