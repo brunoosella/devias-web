@@ -3,81 +3,101 @@
   align-items: center;
   position: relative;
   width: 100%;
-  height: 300px;
-  overflow: hidden;
+  margin-bottom: 100px;
 
   .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
 
     .carousel-container {
       display: flex;
       transition: transform 0.5s ease;
-      width: 20% * 5;
+      width: 90%;
+      padding: 5px 0;
 
-      .insignia {
-        display: flex;
-        justify-content: center;
-        flex: 0 0 20%;
-        max-width: 20%;
-        margin: 0;
-        opacity: 0;
-        transition: opacity 0.5s ease;
+      .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 2px 10px;
+        position: unset;
 
-        &.visible {
+        .swiper-slide {
+          transition: opacity 0.5s ease-out;
           opacity: 1;
+
+          a {
+            width: 100%;
+            height: 100%;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              cursor: pointer;
+              filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.3));
+              transition: scale 0.2s ease;
+
+              &:hover {
+                scale: 1.02;
+              }
+            }
+          }
+
+          &.swiper-slide-prev {
+            transition: opacity 0.5s ease-out;
+            opacity: 0;
+          }
         }
-        a {
 
-          img {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-            filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.3));
-            transition: scale 0.2s ease;
+        .swiper-button-next {
+          color: #828282b8;
+          right: 5px;
+          padding: 0 20px;
+          transition: color 0.1s ease;
 
-            &:hover {
-              scale: 1.02;
+          @media (max-width: 991px) {
+            right: -20px;
+          }
+
+          &:hover {
+            color: #828282;
+          }
+          
+          &::after {
+            @media (max-width: 459px) {
+              font-size: 30px;
             }
           }
         }
+
+        .swiper-button-prev {
+          color: #828282b8;
+          left: 5px;
+          padding: 0 20px;
+          transition: color 0.1s ease;
+
+          @media (max-width: 991px) {
+            left: -20px;
+          }
+
+          &:hover {
+            color: #828282;
+          }
+
+          &::after {
+            @media (max-width: 459px) {
+              font-size: 30px;
+            }
+          }
+        }
+
+        .swiper-pagination {
+          display: none;
+        }
       }
     }
-
-    .slider-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 5px;
-      background-color: transparent;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color .2s ease;
-
-      &.next-button {
-        right: 20px;
-      }
-
-      &.prev-button {
-        left: 20px;
-      }
-
-      .icons {
-        display: flex;
-        align-items: center;
-        font-size: 30px;
-        color: #828282;
-        z-index: 999;
-      }
-
-      &:hover {
-        background-color: #82828230;
-      }
-
-      &:focus {
-        outline: none;
-      }
-    }
-
   }
 
 }

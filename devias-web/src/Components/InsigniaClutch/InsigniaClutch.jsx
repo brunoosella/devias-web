@@ -1,10 +1,16 @@
 // External modules
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {Autoplay, Pagination, Navigation} from 'swiper/modules'
 
 // Internal modules
-import {GoChevronLeft, GoChevronRight} from 'react-icons/go'
 import './InsigniaClutch.scss'
+
+// Styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 // Assets
 import itServicesCompany from './Assets/top_clutch.co_it_services_company_government_argentina.png'
@@ -20,9 +26,10 @@ import itServicesCompanyMedical from './Assets/top_clutch.co_it_services_company
 export default function InsigniaClutch() {
 
   // Local state
-  const [currentIndex, setCurrentIndex]       = React.useState(0)
-  const [bufferInsignias, setBufferInsignias] = React.useState([...insignias])
-  const [insignias, setInsignias]             = React.useState([
+  const [cantInsignia, setCantInsignia] = React.useState(5)
+
+  // Constants
+  const insignias = ([
     {
       title: 'Top Clutch It Services Company Government Argentina',
       img: itServicesCompany
@@ -61,91 +68,105 @@ export default function InsigniaClutch() {
     }
   ])
 
-  //References
-  const carouselRef = React.useRef()
-
-  // Effects
+  //Effect to indicate the number of badges to display
   React.useEffect(() => {
 
-    const interval = setInterval(() => {
+    let cant = 0
 
-      if (currentIndex >= insignias.length) {
+    const width = window.innerWidth
 
-        carouselRef.current.style.transition = 'none'
-        setCurrentIndex(0)
+    if (width >= 992) {
+
+      cant = 5
+
+    } else if (width >= 768) {
+
+      cant = 4
+
+    } else if (width >= 576) {
+
+      cant = 3
+
+    } else if (width >= 460) {
+
+      cant = 2
+
+    } else {
+
+      cant = 1
+
+    }
+
+    const handleResize = () => {
+
+      let cantResize = 0
+      const newWidth = window.innerWidth
+
+      if (newWidth >= 992) {
+
+        cantResize = 5
+
+      } else if (newWidth >= 768) {
+
+        cantResize = 4
+
+      } else if (newWidth >= 576) {
+
+        cantResize = 3
+
+      } else if (newWidth >= 460) {
+
+        cantResize = 2
 
       } else {
 
-        nextImage()
+        cantResize = 1
 
       }
 
-    }, 10000)
-
-    return () => clearInterval(interval)
-
-  }, [currentIndex])
-
-  React.useEffect(() => {
-
-    if (currentIndex !== 0) {
-
-      carouselRef.current.style.transition = 'transform 0.5s ease'
-
-    }
-    carouselRef.current.style.transform = `translateX(-${currentIndex * 100 / 5}%)`
-    console.log(currentIndex)
-
-  }, [currentIndex, insignias.length])
-
-  const nextImage = () => {
-
-    setCurrentIndex((currentIndex + 1) % insignias.length)
-
-    if (currentIndex === insignias.length - 5) {
-
-      setInsignias([...insignias, ...bufferInsignias])
-      setBufferInsignias(insignias)
+      setCantInsignia(cantResize)
 
     }
 
-  }
+    window.addEventListener('resize', handleResize)
 
-  const previousImage = () => {
+    setCantInsignia(cant)
 
-    setCurrentIndex(currentIndex === 0 ? insignias.length - 1 : currentIndex - 1)
+    return () => window.removeEventListener('resize', handleResize)
 
-    if (currentIndex === 0 && bufferInsignias.length === 0) {
-
-      setBufferInsignias([...insignias])
-      setInsignias([insignias[insignias.length - 1]])
-
-    }
-
-  }
+  }, [])
 
   return (
     <div id='insignia-carousel'>
       <div className='container'>
-        <div className='carousel-container' ref={carouselRef}>
+        <div className='carousel-container'>
 
-          {insignias.map((insignia, index) => (
-            <div
-              className={`insignia ${index >= currentIndex && index < currentIndex + 5 ? 'visible' : 'hidden'}`}
-              key={index}
-            >
-              <Link to='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank'>
-                <img src={insignia.img} alt={insignia.title} />
-              </Link>
-            </div>
-          ))}
+          <Swiper
+            slidesPerView={cantInsignia}
+            spaceBetween={25}
+            loop={true}
+            autoplay={{
+              delay: 10000,
+              disableOnInteraction: false
+            }}
+            pagination={{
+              clickable: true
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className='swiper'
+          >
+
+            {insignias.map((insignia, index) => (
+              <SwiperSlide key={index}>
+
+                <Link to='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank'>
+                  <img src={insignia.img} alt={insignia.title} />
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        <button className='slider-button prev-button' onClick={previousImage}>
-          <i className='icons'> <GoChevronLeft /> </i>
-        </button>
-        <button className='slider-button next-button' onClick={nextImage}>
-          <i className='icons'> <GoChevronRight /> </i>
-        </button>
       </div>
     </div>
   )
