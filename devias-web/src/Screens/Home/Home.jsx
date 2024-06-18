@@ -98,10 +98,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Insignias Clutch */}
+      <InsigniaClutch />
+
       {/* Tech Stack */}
       <TechStack />
-
-      <InsigniaClutch />
 
       <section className='highlighted-project'>
         <div className='container'>
