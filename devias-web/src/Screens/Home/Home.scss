@@ -47,8 +47,12 @@
   }
 
   .services-card{
-    margin-bottom: 150px;
+    margin-bottom: 110px;
     animation: slideDown 1.5s ease-in-out;
+
+    @media (max-width: 575px) {
+      margin-bottom: 90px;
+    }
 
     .container{
       .row{
